@@ -4,24 +4,25 @@
 
 <html lang="fr">
 
-
 <head>
-    <meta charset="utf-8" />
     <!-- UTF-8 (Universal Character Set Transformation Format-8 bits) conçu pour coder l’ensemble des caractères du «répertoire universel de caractères codés» -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
     <!-- Declaration pour responsive mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Nom de l'onglet dans le navigateur -->
     <meta name="description" content="OhMyFood, l'entreprise de commande de repas en ligne.">
     <title>OhMyFood</title>
-    <!-- Nom de l'onglet dans le navigateur -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Appel feuille de styles CSS PSa -->
+
+    <!-- Police Roboto/Shrikhand/Raleway -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <!-- Police Roboto/Shrikhand/Raleway -->
-    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- Police Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!-- Appel feuille de styles CSS PSa -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 
@@ -30,9 +31,9 @@
     <header>
 
         <!-- Logo -->
-        <img class="logo" src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+        <img class="logo" src="assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
 
-        <!-- Localisation -->
+        <!-- Localisation à Paris -->
         <nav class="localisation">
             <span>
                 <i class="fas fa-map-marker-alt mapmarker"></i>
@@ -86,46 +87,46 @@
 
                 <!-- Fiche Restaurant 1 - La palette du goût -->
                 <div class="fiche">
-                    <a href="palette_du_gout.html" class="menu">
-                        <img class="image_fiche_restaurant" src="images/restaurants/palette_du_gout.jpg" alt="restaurant" title="photo restaurant" />
+                    <a href="restaurants/palette_du_gout.html" class="menu">
+                        <img class="image_fiche_restaurant" src="assets/images/restaurants/palette_du_gout.jpg" alt="restaurant" title="photo restaurant" />
 
-                        <div class="fiche_info">
-                            <div class="fiche_info_text">
-                                <p class="fiche_info_text_nom">La palette du goût</p>
-                                <p class="fiche_info_text_lieu">Ménilmontant</p>
+                        <div class="fiche__info">
+                            <div class="fiche__info__text">
+                                <p class="fiche__info__text--nom">La palette du goût</p>
+                                <p class="fiche__info__text--lieu">Ménilmontant</p>
                             </div>
 
-                            <div class="fiche_info_coeur">
-                                <i class="far fa-heart fiche_info_coeur_dessin empty"></i>
-                                <i class="fas fa-heart fiche_info_coeur_dessin full"></i>
+                            <div class="fiche__info__coeur">
+                                <i class="far fa-heart fiche__info__coeur--dessin_coeur empty"></i>
+                                <i class="fas fa-heart fiche__info__coeur--dessin_coeur full"></i>
                             </div>
                         </div>
 
-                        <div class="flag_nouveau">
-                            <p class="flag_nouveau_txt">Nouveau</p>
+                        <div class="fiche__flag_nouveau">
+                            <p class="fiche__flag_nouveau--txt">Nouveau</p>
                         </div>
                     </a>
                 </div>
 
                 <!-- Fiche Restaurant 2 - La note enchantée -->
                 <div class="fiche">
-                    <a href="note_enchantee.html" class="menu">
-                        <img class="image_fiche_restaurant" src="images/restaurants/note_enchantee.jpg" alt="restaurant" title="photo restaurant" />
+                    <a href="restaurants/note_enchantee.html" class="menu">
+                        <img class="image_fiche_restaurant" src="assets/images/restaurants/note_enchantee.jpg" alt="restaurant" title="photo restaurant" />
 
-                        <div class="fiche_info">
-                            <div class="fiche_info_text">
-                                <p class="fiche_info_text_nom">La note enchantée</p>
-                                <p class="fiche_info_text_lieu">Charonne</p>
+                        <div class="fiche__info">
+                            <div class="fiche__info__text">
+                                <p class="fiche__info__text--nom">La note enchantée</p>
+                                <p class="fiche__info__text--lieu">Charonne</p>
                             </div>
 
-                            <div class="fiche_info_coeur">
-                                <i class="far fa-heart fiche_info_coeur_dessin empty"></i>
-                                <i class="fas fa-heart fiche_info_coeur_dessin full"></i>
+                            <div class="fiche__info__coeur">
+                                <i class="far fa-heart fiche__info__coeur--dessin_coeur empty"></i>
+                                <i class="fas fa-heart fiche__info__coeur--dessin_coeur full"></i>
                             </div>
                         </div>
 
-                        <div class="flag_nouveau">
-                            <p class="flag_nouveau_txt">Nouveau</p>
+                        <div class="fiche__flag_nouveau">
+                            <p class="fiche__flag_nouveau--txt">Nouveau</p>
                         </div>
                     </a>
                 </div>
@@ -133,18 +134,18 @@
 
                 <!-- Fiche Restaurant 3 - A la française -->
                 <div class="fiche">
-                    <a href="a_la_francaise.html" class="menu">
-                        <img class="image_fiche_restaurant" src="images/restaurants/a_la_francaise.jpg" alt="restaurant" title="photo restaurant" />
+                    <a href="restaurants/a_la_francaise.html" class="menu">
+                        <img class="image_fiche_restaurant" src="assets/images/restaurants/a_la_francaise.jpg" alt="restaurant" title="photo restaurant" />
 
-                        <div class="fiche_info">
-                            <div class="fiche_info_text">
-                                <p class="fiche_info_text_nom">A la française</p>
-                                <p class="fiche_info_text_lieu">Cité Rouge</p>
+                        <div class="fiche__info">
+                            <div class="fiche__info__text">
+                                <p class="fiche__info__text--nom">A la française</p>
+                                <p class="fiche__info__text--lieu">Cité Rouge</p>
                             </div>
 
-                            <div class="fiche_info_coeur">
-                                <i class="far fa-heart fiche_info_coeur_dessin empty"></i>
-                                <i class="fas fa-heart fiche_info_coeur_dessin full"></i>
+                            <div class="fiche__info__coeur">
+                                <i class="far fa-heart fiche__info__coeur--dessin_coeur empty"></i>
+                                <i class="fas fa-heart fiche__info__coeur--dessin_coeur full"></i>
                             </div>
                         </div>
                     </a>
@@ -153,18 +154,18 @@
 
                 <!-- Fiche Restaurant 4 - Le délice des sens -->
                 <div class="fiche">
-                    <a href="delice_des_sens.html" class="menu">
-                        <img class="image_fiche_restaurant" src="images/restaurants/delice _des_sens.jpg" alt="restaurant" title="photo restaurant" />
+                    <a href="restaurants/delice_des_sens.html" class="menu">
+                        <img class="image_fiche_restaurant" src="assets/images/restaurants/delice _des_sens.jpg" alt="restaurant" title="photo restaurant" />
 
-                        <div class="fiche_info">
-                            <div class="fiche_info_text">
-                                <p class="fiche_info_text_nom">Le délice des sens</p>
-                                <p class="fiche_info_text_lieu">Folie-Méricourt</p>
+                        <div class="fiche__info">
+                            <div class="fiche__info__text">
+                                <p class="fiche__info__text--nom">Le délice des sens</p>
+                                <p class="fiche__info__text--lieu">Folie-Méricourt</p>
                             </div>
 
-                            <div class="fiche_info_coeur">
-                                <i class="far fa-heart fiche_info_coeur_dessin empty"></i>
-                                <i class="fas fa-heart fiche_info_coeur_dessin full"></i>
+                            <div class="fiche__info__coeur">
+                                <i class="far fa-heart fiche__info__coeur--dessin_coeur empty"></i>
+                                <i class="fas fa-heart fiche__info__coeur--dessin_coeur full"></i>
                             </div>
                         </div>
                     </a>
@@ -186,13 +187,15 @@
         <!-- Contenu du Footer -->
         <div class="footer">
 
+            <!-- Lien vers page Proposer un restaurant -->
             <div class="proposition">
                 <div>
                     <i class="fas fa-utensils"></i>
                 </div>
-                <a href="proposition.html">Proposer un restaurant</a>
+                <a href="proposition_restaurant.html">Proposer un restaurant</a>
             </div>
 
+            <!-- Lien vers page Devenir partenaire -->
             <div class="partenariat">
                 <div>
                     <i class="fas fa-hands-helping"></i>
@@ -200,8 +203,10 @@
                 <a href="partenariat.html">Devenir partenaire</a>
             </div>
 
+            <!-- Lien vers page Mentions légales du site -->
             <a href="mentions_legales.html">Mentions légales</a>
             <br>
+            <!-- Envoi vers un logiciel de mail -->
             <a href="mailto:contact@ohmyfood.com">Contact</a>
 
         </div>

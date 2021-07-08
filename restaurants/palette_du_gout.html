@@ -6,22 +6,24 @@
 
 
 <head>
-    <meta charset="utf-8" />
     <!-- UTF-8 (Universal Character Set Transformation Format-8 bits) conçu pour coder l’ensemble des caractères du «répertoire universel de caractères codés» -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
     <!-- Declaration pour responsive mobile -->
-    <meta name="description" content="OhMyFood, l'entreprise de commande de repas en ligne.">
-    <title>OhMyFood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Nom de l'onglet dans le navigateur -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Appel feuille de styles CSS PSa -->
+    <meta name="description" content="OhMyFood, l'entreprise de commande de repas en ligne.">
+    <title>La palette du goût</title>
+
+    <!-- Police Roboto/Shrikhand/Raleway -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <!-- Police Roboto/Shrikhand/Raleway -->
-    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- Police Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!-- Appel feuille de styles CSS PSa -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 
@@ -31,23 +33,23 @@
     <header class="headerrestaurant">
 
         <!-- Logo et Flêche Retour -->
-        <a href="index.html" class="backarrow"><i class="fas fa-arrow-left"></i></a>
+        <a href="../index.html" class="backarrow"><i class="fas fa-arrow-left"></i></a>
         <h1>ohmyfood</h1>
 
     </header>
 
     <main>
 
-        <img class="image_fiche_restaurant" src="images/restaurants/palette_du_gout.jpg" alt="restaurant" title="photo restaurant">
+        <img class="image_fiche_restaurant" src="../assets/images/restaurants/palette_du_gout.jpg" alt="restaurant" title="photo restaurant">
 
         <section class="menus">
 
             <div class="titre">
                 <h2 class="nom_restaurant">La palette du goût</h2>
 
-                <div class="fiche_info_coeur">
-                    <i class="far fa-heart fiche_info_coeur_dessin empty"></i>
-                    <i class="fas fa-heart fiche_info_coeur_dessin full"></i>
+                <div class="fiche__info__coeur">
+                    <i class="far fa-heart fiche__info__coeur--dessin_coeur empty"></i>
+                    <i class="fas fa-heart fiche__info__coeur--dessin_coeur full"></i>
                 </div>
 
             </div>
@@ -63,51 +65,51 @@
                     <!-- Entrée n°1 -->
                     <div class="carte">
                         <!-- Bloc info composition du menu -->
-                        <div class="carte_info">
-                            <p class="carte_info_nom_plat">Fricassée d'escargots</p>
-                            <p class="carte_info_nom_complement">Au piment d'Espelette</p>
+                        <div class="carte__info">
+                            <p class="carte__info--nom_plat">Fricassée d'escargots</p>
+                            <p class="carte__info--nom_complement">Au piment d'Espelette</p>
                         </div>
                         <!-- Bloc info prix -->
-                        <div class="carte_info_prix">
-                            <p class="carte_info_prix_texte">25€</p>
+                        <div class="carte__info__prix">
+                            <p class="carte__info__prix--texte">25€</p>
                         </div>
                         <!-- Bloc Validation -->
-                        <div class="carte_validation">
-                            <i class="fas fa-check-circle carte_validation_icone"></i>
+                        <div class="carte__validation">
+                            <i class="fas fa-check-circle carte__validation--icone"></i>
                         </div>
                     </div>
 
                     <!-- Entrée n°2 -->
                     <div class="carte">
                         <!-- Bloc info composition du menu -->
-                        <div class="carte_info">
-                            <p class="carte_info_nom_plat">Foie gras de canard mi-cuit</p>
-                            <p class="carte_info_nom_complement">Et ses copeaux de truffe noire</p>
+                        <div class="carte__info">
+                            <p class="carte__info--nom_plat">Foie gras de canard mi-cuit</p>
+                            <p class="carte__info--nom_complement">Et ses copeaux de truffe noire</p>
                         </div>
                         <!-- Bloc info prix -->
-                        <div class="carte_info_prix">
-                            <p class="carte_info_prix_texte">35€</p>
+                        <div class="carte__info__prix">
+                            <p class="carte__info__prix--texte">35€</p>
                         </div>
                         <!-- Bloc Validation -->
-                        <div class="carte_validation">
-                            <i class="fas fa-check-circle carte_validation_icone"></i>
+                        <div class="carte__validation">
+                            <i class="fas fa-check-circle carte__validation--icone"></i>
                         </div>
                     </div>
 
                     <!-- Entrée n°3 -->
                     <div class="carte">
                         <!-- Bloc info composition du menu -->
-                        <div class="carte_info">
-                            <p class="carte_info_nom_plat">Oeuf au plat</p>
-                            <p class="carte_info_nom_complement">Assaisonné à la truffe sur lit de poireaux</p>
+                        <div class="carte__info">
+                            <p class="carte__info--nom_plat">Oeuf au plat</p>
+                            <p class="carte__info--nom_complement">Assaisonné à la truffe sur lit de poireaux</p>
                         </div>
                         <!-- Bloc info prix -->
-                        <div class="carte_info_prix">
-                            <p class="carte_info_prix_texte">20€</p>
+                        <div class="carte__info__prix">
+                            <p class="carte__info__prix--texte">20€</p>
                         </div>
                         <!-- Bloc Validation -->
-                        <div class="carte_validation">
-                            <i class="fas fa-check-circle carte_validation_icone"></i>
+                        <div class="carte__validation">
+                            <i class="fas fa-check-circle carte__validation--icone"></i>
                         </div>
                     </div>
                 </div>
@@ -120,51 +122,51 @@
                     <!-- Plat n°1 -->
                     <div class="carte">
                         <!-- Bloc info composition du menu -->
-                        <div class="carte_info">
-                            <p class="carte_info_nom_plat">Filet de boeuf aux herbes</p>
-                            <p class="carte_info_nom_complement">Accompagné de sa ribambelle de légumes</p>
+                        <div class="carte__info">
+                            <p class="carte__info--nom_plat">Filet de boeuf aux herbes</p>
+                            <p class="carte__info--nom_complement">Accompagné de sa ribambelle de légumes</p>
                         </div>
                         <!-- Bloc info prix -->
-                        <div class="carte_info_prix">
-                            <p class="carte_info_prix_texte">40€</p>
+                        <div class="carte__info__prix">
+                            <p class="carte__info__prix--texte">40€</p>
                         </div>
                         <!-- Bloc Validation -->
-                        <div class="carte_validation">
-                            <i class="fas fa-check-circle carte_validation_icone"></i>
+                        <div class="carte__validation">
+                            <i class="fas fa-check-circle carte__validation--icone"></i>
                         </div>
                     </div>
 
                     <!-- Plat n°2 -->
                     <div class="carte">
                         <!-- Bloc info composition du menu -->
-                        <div class="carte_info">
-                            <p class="carte_info_nom_plat">Parmentier de queue de boeuf</p>
-                            <p class="carte_info_nom_complement">A la truffe noire sur sa purée de panais</p>
+                        <div class="carte__info">
+                            <p class="carte__info--nom_plat">Parmentier de queue de boeuf</p>
+                            <p class="carte__info--nom_complement">A la truffe noire sur sa purée de panais</p>
                         </div>
                         <!-- Bloc info prix -->
-                        <div class="carte_info_prix">
-                            <p class="carte_info_prix_texte">35€</p>
+                        <div class="carte__info__prix">
+                            <p class="carte__info__prix--texte">35€</p>
                         </div>
                         <!-- Bloc Validation -->
-                        <div class="carte_validation">
-                            <i class="fas fa-check-circle carte_validation_icone"></i>
+                        <div class="carte__validation">
+                            <i class="fas fa-check-circle carte__validation--icone"></i>
                         </div>
                     </div>
 
                     <!-- Plat n°3 -->
                     <div class="carte">
                         <!-- Bloc info composition du menu -->
-                        <div class="carte_info">
-                            <p class="carte_info_nom_plat">Filet de turbot</p>
-                            <p class="carte_info_nom_complement">Aux agrumes</p>
+                        <div class="carte__info">
+                            <p class="carte__info--nom_plat">Filet de turbot</p>
+                            <p class="carte__info--nom_complement">Aux agrumes</p>
                         </div>
                         <!-- Bloc info prix -->
-                        <div class="carte_info_prix">
-                            <p class="carte_info_prix_texte">44€</p>
+                        <div class="carte__info__prix">
+                            <p class="carte__info__prix--texte">44€</p>
                         </div>
                         <!-- Bloc Validation -->
-                        <div class="carte_validation">
-                            <i class="fas fa-check-circle carte_validation_icone"></i>
+                        <div class="carte__validation">
+                            <i class="fas fa-check-circle carte__validation--icone"></i>
                         </div>
                     </div>
                 </div>
@@ -178,51 +180,51 @@
                     <!-- Dessert n°1 -->
                     <div class="carte">
                         <!-- Bloc info composition du menu -->
-                        <div class="carte_info">
-                            <p class="carte_info_nom_plat">Paris-Brest</p>
-                            <p class="carte_info_nom_complement">Revisité</p>
+                        <div class="carte__info">
+                            <p class="carte__info--nom_plat">Paris-Brest</p>
+                            <p class="carte__info--nom_complement">Revisité</p>
                         </div>
                         <!-- Bloc info prix -->
-                        <div class="carte_info_prix">
-                            <p class="carte_info_prix_texte">18€</p>
+                        <div class="carte__info__prix">
+                            <p class="carte__info__prix--texte">18€</p>
                         </div>
                         <!-- Bloc Validation -->
-                        <div class="carte_validation">
-                            <i class="fas fa-check-circle carte_validation_icone"></i>
+                        <div class="carte__validation">
+                            <i class="fas fa-check-circle carte__validation--icone"></i>
                         </div>
                     </div>
 
                     <!-- Dessert n°2 -->
                     <div class="carte">
                         <!-- Bloc info composition du menu -->
-                        <div class="carte_info">
-                            <p class="carte_info_nom_plat">Macaron au chocolat d'exception</p>
-                            <p class="carte_info_nom_complement">Et glace à la vanille de Madagascar</p>
+                        <div class="carte__info">
+                            <p class="carte__info--nom_plat">Macaron au chocolat d'exception</p>
+                            <p class="carte__info--nom_complement">Et glace à la vanille de Madagascar</p>
                         </div>
                         <!-- Bloc info prix -->
-                        <div class="carte_info_prix">
-                            <p class="carte_info_prix_texte">22€</p>
+                        <div class="carte__info__prix">
+                            <p class="carte__info__prix--texte">22€</p>
                         </div>
                         <!-- Bloc Validation -->
-                        <div class="carte_validation">
-                            <i class="fas fa-check-circle carte_validation_icone"></i>
+                        <div class="carte__validation">
+                            <i class="fas fa-check-circle carte__validation--icone"></i>
                         </div>
                     </div>
 
                     <!-- Dessert n°3 -->
                     <div class="carte">
                         <!-- Bloc info composition du menu -->
-                        <div class="carte_info">
-                            <p class="carte_info_nom_plat">Mousse au chocolat</p>
-                            <p class="carte_info_nom_complement">Au piment d'Espelette et à la truffe noire</p>
+                        <div class="carte__info">
+                            <p class="carte__info--nom_plat">Mousse au chocolat</p>
+                            <p class="carte__info--nom_complement">Au piment d'Espelette et à la truffe noire</p>
                         </div>
                         <!-- Bloc info prix -->
-                        <div class="carte_info_prix">
-                            <p class="carte_info_prix_texte">23€</p>
+                        <div class="carte__info__prix">
+                            <p class="carte__info__prix--texte">23€</p>
                         </div>
                         <!-- Bloc Validation -->
-                        <div class="carte_validation">
-                            <i class="fas fa-check-circle carte_validation_icone"></i>
+                        <div class="carte__validation">
+                            <i class="fas fa-check-circle carte__validation--icone"></i>
                         </div>
                     </div>
                 </div>
@@ -242,13 +244,15 @@
         <!-- Contenu du Footer -->
         <div class="footer">
 
+            <!-- Lien vers page Proposer un restaurant -->
             <div class="proposition">
                 <div>
                     <i class="fas fa-utensils"></i>
                 </div>
-                <a href="proposition.html">Proposer un restaurant</a>
+                <a href="proposition_restaurant.html">Proposer un restaurant</a>
             </div>
 
+            <!-- Lien vers page Devenir partenaire -->
             <div class="partenariat">
                 <div>
                     <i class="fas fa-hands-helping"></i>
@@ -256,8 +260,10 @@
                 <a href="partenariat.html">Devenir partenaire</a>
             </div>
 
+            <!-- Lien vers page Mentions légales du site -->
             <a href="mentions_legales.html">Mentions légales</a>
             <br>
+            <!-- Envoi vers un logiciel de mail -->
             <a href="mailto:contact@ohmyfood.com">Contact</a>
 
         </div>
