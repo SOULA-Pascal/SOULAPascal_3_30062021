@@ -1,6 +1,181 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Liste des Polices de Caractères utilisées pour le site OhMyFood */
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
 /* Style.scss */
 body {
   background: black;
+  padding-left: 0px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+}
+
+/* Logo OhMyFood */
+.logo {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 50%;
+}
+
+/* Fonctionnement */
+.container_choix_fonctionnement {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Footer */
+footer {
+  background-color: #353535;
+  padding-left: 25px;
+  line-height: 1.5;
+  padding-bottom: 25px;
+}/*# sourceMappingURL=style.css.map */

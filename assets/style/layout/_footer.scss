@@ -1,0 +1,32 @@
+/* Footer */
+
+footer {
+    background-color: $darkgrey-color;
+    padding-left: 25px;
+    line-height: 1.5;
+    padding-bottom: 25px;
+}
+
+footer a {
+    font-family: $font-text;
+    font-size: 1rem;
+    color: $white-color;
+}
+
+footer h3 {
+    font-family: $font-title;
+    font-size: 1.1rem;
+    color: $white-color;
+    padding-top: 25px;
+    padding-bottom: 1.1rem;
+}
+
+.proposition {
+    display: flex;
+    flex-direction: row;
+}
+
+.partenariat {
+    display: flex;
+    flex-direction: row;
+}

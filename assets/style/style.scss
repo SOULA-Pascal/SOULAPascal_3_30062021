@@ -1,6 +1,7 @@
-/* Style.scss */
-
-body {
-    background: black;
-}
-
+@import "./base/reset";
+@import "./base/typographie";
+@import "./utils/variables";
+@import "./layouts/header";
+@import "./layouts/general";
+@import "./layouts/footer";
+@import "./components/boutons";

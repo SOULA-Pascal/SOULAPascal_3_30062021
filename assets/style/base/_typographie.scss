@@ -1,0 +1,18 @@
+/* Liste des Polices de Caractères utilisées pour le site OhMyFood */
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Shrikhand-Regular";
+    src: url("polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+
+$font-text:"Roboto-Regular",
+Arial,
+sans-serif;
+$font-title: "Shrikhand-Regular",
+Arial,
+sans-serif;
