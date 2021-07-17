@@ -1,27 +1,25 @@
 /* Footer */
 
 footer {
-    background-color: $darkgrey-color3535;
+    background-color: $darkgrey-color;
     padding-left: 25px;
     line-height: 1.5;
     padding-bottom: 25px;
+    a {
+        font-family: $font-text;
+        font-size: 1rem;
+        color: $white-color;
+    }
+    h3 {
+        font-family: $font-title;
+        font-size: 1.1rem;
+        color: $white-color;
+        padding-top: 25px;
+        padding-bottom: 1.1rem;
+    }
 }
 
-footer a {
-    font-family: $font-text;
-    font-size: 1rem;
-    color: $white-color;
-}
-
-footer h3 {
-    font-family: $font-title;
-    font-size: 1.1rem;
-    color: $white-color;
-    padding-top: 25px;
-    padding-bottom: 1.1rem;
-}
-
-.suggestion {
+.proposition {
     display: flex;
     flex-direction: row;
 }
@@ -30,3 +28,5 @@ footer h3 {
     display: flex;
     flex-direction: row;
 }
+
+@media (min-width: 300px) and (max-width: 767px) {}

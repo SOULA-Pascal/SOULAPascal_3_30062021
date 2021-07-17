@@ -145,13 +145,23 @@ table {
   font-family: "Shrikhand-Regular";
   src: url("polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
-/* Style.scss */
-body {
-  background: black;
-  padding-left: 0px;
-}
-
-/* Header */
+/* Définitions des Variables utilisées pour le site */
+/* Variables de Couleurs */
+/* Noir */
+/* Blanc */
+/* Gris clair */
+/* Gris moyen */
+/* Gris foncé */
+/* Violet */
+/* Rose */
+/* Vert pâle */
+/* Vert foncé */
+/*
+Variables de Pages
+*/
+/* Ombre grisée */
+/* Couleur Background */
+/* Header OhMyFood */
 header {
   display: flex;
   justify-content: center;
@@ -164,6 +174,35 @@ header {
   width: 50%;
 }
 
+/* Style.scss */
+body {
+  background: #FFFFFF;
+  padding-left: 0px;
+}
+
+.localisation {
+  width: 100%;
+  margin-top: 2px;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  background-color: #aaa7a7;
+  font-size: 1.6rem;
+  padding: 5px 0 5px 50px;
+  border-style: solid;
+  border-top-width: 3px;
+  border-color: #C8C8C8;
+}
+
+.inputplace {
+  border: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
 /* Fonctionnement */
 .container_choix_fonctionnement {
   display: flex;
@@ -174,8 +213,32 @@ header {
 
 /* Footer */
 footer {
-  background-color: #353535;
+  background-color: #474444;
   padding-left: 25px;
   line-height: 1.5;
   padding-bottom: 25px;
-}/*# sourceMappingURL=style.css.map */
+}
+footer a {
+  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+footer h3 {
+  font-family: "Shrikhand-Regular", Times, serif;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  padding-top: 25px;
+  padding-bottom: 1.1rem;
+}
+
+.proposition {
+  display: flex;
+  flex-direction: row;
+}
+
+.partenariat {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Définitions des Boutons utilisés pour le site *//*# sourceMappingURL=style.css.map */

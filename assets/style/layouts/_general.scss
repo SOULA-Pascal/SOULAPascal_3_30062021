@@ -1,8 +1,31 @@
 /* Style.scss */
 
 body {
-    background: black;
+    background: $white-color;
     padding-left: 0px;
+}
+
+.localisation {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    background-color: $lightgrey-color;
+    font-size: 1.6rem;
+    padding: 5px 0 5px 50px;
+    border-style: solid;
+    border-top-width: 3px;
+    border-color: $greyshadow-color;
+}
+
+.inputplace {
+    border: none;
+    background-color: transparent;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 
