@@ -12,21 +12,37 @@ footer {
     }
     h3 {
         font-family: $font-title;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         color: $white-color;
         padding-top: 25px;
         padding-bottom: 1.1rem;
     }
 }
 
+
+/* Proposer un restaurant */
+
 .proposition {
     display: flex;
     flex-direction: row;
 }
 
+
+/* Devenir partenaire */
+
 .partenariat {
     display: flex;
     flex-direction: row;
+}
+
+
+/* Caractères spéciaux pour liens Proposer un restaurant et Devenir partenaire */
+
+.caractere_awesome {
+    font-size: 0.8rem;
+    color: $white-color;
+    padding: 0px 20px 0px 0px;
+    margin: 5px 10px 5px 0px;
 }
 
 @media (min-width: 300px) and (max-width: 767px) {}

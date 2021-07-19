@@ -33,13 +33,6 @@
         <!-- Logo -->
         <img class="logo" src="assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
 
-        <!-- Localisation à Paris -->
-        <nav class="localisation">
-            <span>
-                <i class="fas fa-map-marker-alt mapmarker"></i>
-            </span>
-            <input class="inputplace" type="search" placeholder="Paris, Belleville">
-        </nav>
 
     </header>
 
@@ -47,37 +40,50 @@
 
     <main>
 
-        <!-- Découverte des Restaurants -->
-        <section class="decouverte">
-            <h1><strong>Réservez le menu qui vous convient</strong></h1>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button type="submit" class="btn">Explorer nos restaurants</button>
-        </section>
+        <!-- Localisation à Paris -->
 
-        <!-- Fonctionnement -->
-        <section>
-            <div>
-                <h2 class="fonctionnement">Fonctionnement</h2>
+        <div classe="localisation_et_fonctionnement">
+
+            <div class="localisation_ville">
+                <span class="map_marker">
+                <i class="fas fa-map-marker-alt mapmarker"></i>
+            </span>
+                <input class="input_localisation" type="search" placeholder="Paris, Belleville">
             </div>
 
-            <div class="container_choix_fonctionnement">
-                <div class="choix">
-                    <p>1</p>
-                    <button class="choix_restaurant"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</button>
+            <!-- Découverte des Restaurants -->
+
+            <section class="decouverte">
+                <h1><strong>Réservez le menu qui vous convient</strong></h1>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <button type="submit" class="btn">Explorer nos restaurants</button>
+            </section>
+
+            <!-- Fonctionnement -->
+
+            <section class="fonctionnement">
+                <div>
+                    <h2 class="choix_fonctionnement">Fonctionnement</h2>
                 </div>
 
-                <div class="choix">
-                    <p>2</p>
-                    <button class="composition_menu"><i class="fas fa-list-ul"></i>Composez votre menu</button>
-                </div>
+                <div class="container_choix_fonctionnement">
+                    <div class="choix">
+                        <p>1</p>
+                        <button class="choix_restaurant"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</button>
+                    </div>
 
-                <div class="choix">
-                    <p>3</p>
-                    <button class="degustation_restaurant"><i class="fas fa-store"></i>Dégustez au restaurant</button>
-                </div>
-            </div>
-        </section>
+                    <div class="choix">
+                        <p>2</p>
+                        <button class="composition_menu"><i class="fas fa-list-ul"></i>Composez votre menu</button>
+                    </div>
 
+                    <div class="choix">
+                        <p>3</p>
+                        <button class="degustation_restaurant"><i class="fas fa-store"></i>Dégustez au restaurant</button>
+                    </div>
+                </div>
+            </section>
+        </div>
         <!-- Liste des Restaurants -->
         <section class="liste_restaurants">
 
@@ -88,7 +94,7 @@
                 <!-- Fiche Restaurant 1 - La palette du goût -->
                 <div class="fiche">
                     <a href="restaurants/palette_du_gout.html" class="menu">
-                        <img class="image_fiche_restaurant" src="assets/images/restaurants/palette_du_gout.jpg" alt="restaurant" title="photo restaurant" />
+                        <img class="fiche--image" src="assets/images/restaurants/palette_du_gout.jpg" alt="restaurant" title="photo restaurant" />
 
                         <div class="fiche__info">
                             <div class="fiche__info__text">
@@ -103,7 +109,7 @@
                         </div>
 
                         <div class="fiche__flag_nouveau">
-                            <p class="fiche__flag_nouveau--txt">Nouveau</p>
+                            <p class="fiche__flag_nouveau--text">Nouveau</p>
                         </div>
                     </a>
                 </div>
@@ -111,7 +117,7 @@
                 <!-- Fiche Restaurant 2 - La note enchantée -->
                 <div class="fiche">
                     <a href="restaurants/note_enchantee.html" class="menu">
-                        <img class="image_fiche_restaurant" src="assets/images/restaurants/note_enchantee.jpg" alt="restaurant" title="photo restaurant" />
+                        <img class="fiche--image" src="assets/images/restaurants/note_enchantee.jpg" alt="restaurant" title="photo restaurant" />
 
                         <div class="fiche__info">
                             <div class="fiche__info__text">
@@ -126,7 +132,7 @@
                         </div>
 
                         <div class="fiche__flag_nouveau">
-                            <p class="fiche__flag_nouveau--txt">Nouveau</p>
+                            <p class="fiche__flag_nouveau--text">Nouveau</p>
                         </div>
                     </a>
                 </div>
@@ -135,7 +141,7 @@
                 <!-- Fiche Restaurant 3 - A la française -->
                 <div class="fiche">
                     <a href="restaurants/a_la_francaise.html" class="menu">
-                        <img class="image_fiche_restaurant" src="assets/images/restaurants/a_la_francaise.jpg" alt="restaurant" title="photo restaurant" />
+                        <img class="fiche--image" src="assets/images/restaurants/a_la_francaise.jpg" alt="restaurant" title="photo restaurant" />
 
                         <div class="fiche__info">
                             <div class="fiche__info__text">
@@ -155,7 +161,7 @@
                 <!-- Fiche Restaurant 4 - Le délice des sens -->
                 <div class="fiche">
                     <a href="restaurants/delice_des_sens.html" class="menu">
-                        <img class="image_fiche_restaurant" src="assets/images/restaurants/delice _des_sens.jpg" alt="restaurant" title="photo restaurant" />
+                        <img class="fiche--image" src="assets/images/restaurants/delice _des_sens.jpg" alt="restaurant" title="photo restaurant" />
 
                         <div class="fiche__info">
                             <div class="fiche__info__text">
@@ -189,7 +195,7 @@
 
             <!-- Lien vers page Proposer un restaurant -->
             <div class="proposition">
-                <div>
+                <div class="caractere_awesome">
                     <i class="fas fa-utensils"></i>
                 </div>
                 <a href="partenariat/proposition_restaurant.html">Proposer un restaurant</a>
@@ -197,7 +203,7 @@
 
             <!-- Lien vers page Devenir partenaire -->
             <div class="partenariat">
-                <div>
+                <div class="caractere_awesome">
                     <i class="fas fa-hands-helping"></i>
                 </div>
                 <a href="partenariat/partenariat.html">Devenir partenaire</a>
