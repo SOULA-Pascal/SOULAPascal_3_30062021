@@ -347,10 +347,10 @@ body {
   max-width: 350px;
   flex-wrap: wrap;
   height: auto;
-  max-height: 300px;
-  border-radius: 15px;
+  max-height: 400px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 2px 2px 20px #C8C8C8;
+  box-shadow: 3px 3px 20px #C8C8C8;
   position: relative;
   margin: 0 auto 30px auto;
 }
@@ -364,7 +364,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 5px 10px 0px;
   position: relative;
 }
 .fiche__info__text {
@@ -420,7 +420,7 @@ footer a {
   color: #FFFFFF;
 }
 footer h3 {
-  font-family: "Shrikhand-Regular", Times, serif;
+  font-family: "Shrikhand-Regular", Raleway, Times, serif;
   font-size: 1.3rem;
   color: #FFFFFF;
   padding-top: 25px;
@@ -474,6 +474,147 @@ footer h3 {
   opacity: 0.6;
   box-shadow: 3px 3px 3px #474444;
   transition: all 0.5s linear;
+}
+
+/* Fichier _page_restaurant.scss
+Caractéristiques de la page du restaurant présenté par le site OhMyFood
+*/
+/* En-tête de la page Restaurant */
+.header_page_restaurant {
+  display: block;
+  margin: 20px 0 20px 0;
+}
+.header_page_restaurant a {
+  position: absolute;
+  margin: 10px 0 0 25px;
+  color: #000000;
+  font-weight: bolder;
+}
+.header_page_restaurant h1 {
+  font-family: "Shrikhand-Regular", Raleway, Times, serif;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Photo du restaurant et en-tête du bloc Menus */
+.fiche--image {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menus {
+  background-color: #ebe3e3;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  transform: translateY(-50px);
+  margin: 0px 0px -50px 0px;
+}
+
+/* Nom du Restaurant */
+.titre {
+  font-family: "Shrikhand-Regular", Raleway, Times, serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px 0 20px 0;
+  padding: 60px 0px 0px 0px;
+}
+.titre--nom_restaurant {
+  font-size: 1.8rem;
+}
+.titre--icone {
+  font-size: 1.5rem;
+  color: #474444;
+}
+
+/* Zone Bloc Menus (Entrées/Plats/Desserts) */
+.bloc_menus h3 {
+  font-family: "Roboto-Regular", Arial, sans-serif;
+  border-bottom: solid 2px #81dac3;
+  width: 50px;
+  margin: 20px 0 0 20px;
+}
+
+.carte_menus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Carte détaillée du Restaurant */
+.carte {
+  font-family: "Roboto-Regular", Arial, sans-serif;
+  width: 350px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px #C8C8C8;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 10px 0 10px 0;
+}
+.carte__info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 10px 10px 10px 10px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte__info--nom_plat {
+  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte__info--nom_complement {
+  font-family: "Roboto-Regular", Arial, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte__prix {
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 20px 10px 10px 10px;
+}
+.carte__validation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 30%;
+  max-width: 0;
+  overflow: hidden;
+  background-color: #81dac3;
+  transition: all 0.5s linear;
+}
+.carte__validation--icone {
+  color: #FFFFFF;
+  font-size: 20px;
+  transition: all 0.5s linear;
+}
+.carte:hover .carte__validation {
+  max-width: 50px;
+}
+.carte:hover .carte__validation--icone {
+  transform: rotateZ(360deg);
+}
+
+.commande {
+  padding: 30px 0 30px 0;
 }
 
 /*
