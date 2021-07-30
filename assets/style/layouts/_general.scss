@@ -1,62 +1,59 @@
-/* Fichier _general.scss
+                    /* Fichier _general.scss
 Caractéristiques de la page principale du site OhMyFood
 */
-
-body {
-    background: $white-color;
-    padding-left: 0px;
-}
-
-
-/* Localisation */
-
-.localisation_et_fonctionnement {
-    width: 100%;
-    margin-top: 3px;
-}
-
-.map_marker {
-    display: flex;
-    justify-content: center;
-    font-size: 1.2rem;
-    padding: 5px 5px 5px 5px;
-}
-
-.localisation_ville {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5rem;
-    padding: 5px 5px 5px 5px;
-    border-style: solid;
-    border-top-width: 3px;
-    border-color: $darkgrey-color;
-    background-color: $mediumgrey-color;
-}
-
-.input_localisation {
-    font-size: 1.0rem;
-    font-weight: bold;
-    border: none;
-    background-color: transparent;
-}
-
-.decouverte {
-    font-family: $font-text;
-    text-align: center;
-    background-color: $lightgrey-color;
-    padding: 50px 0 50px 0;
-    h1 {
-        font-size: 1.4rem;
-        font-weight: bolder;
-        padding: 5px 80px 10px 80px;
-    }
-    p {
-        padding: 5px 40px 30px 40px;
-    }
-}
-
-
-/* nesting ci-dessus au lieu du code ci-dessous :
+                    
+                    body {
+                        background: $white-color;
+                        padding-left: 0px;
+                        text-decoration: none;
+                    }
+                    /* Localisation */
+                    
+                    .localisation_et_fonctionnement {
+                        width: 100%;
+                        margin-top: 3px;
+                    }
+                    
+                    .map_marker {
+                        display: flex;
+                        justify-content: center;
+                        font-size: 1.2rem;
+                        padding: 5px 5px 5px 5px;
+                    }
+                    
+                    .localisation_ville {
+                        display: flex;
+                        justify-content: center;
+                        font-size: 1.5rem;
+                        padding: 5px 5px 5px 5px;
+                        border-style: solid;
+                        border-top-width: 3px;
+                        border-color: $darkgrey-color;
+                        background-color: $mediumgrey-color;
+                    }
+                    
+                    .input_localisation {
+                        font-size: 1.0rem;
+                        font-weight: bold;
+                        border: none;
+                        background-color: transparent;
+                    }
+                    
+                    .decouverte {
+                        font-family: $font-text;
+                        text-align: center;
+                        background-color: $lightgrey-color;
+                        padding: 50px 0 50px 0;
+                        h1 {
+                            font-size: 1.4rem;
+                            font-weight: bolder;
+                            padding: 5px 80px 10px 80px;
+                        }
+                        p {
+                            padding: 5px 40px 30px 40px;
+                        }
+                    }
+                    /* nesting ci-dessus au lieu du code ci-dessous :
 .decouverte h1 {
     font-size: 1.4rem;
     font-weight: bolder;
@@ -71,168 +68,170 @@ body {
     padding-bottom: 40px;
 }
 */
-
-
-/* Fonctionnement */
-
-.fonctionnement {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-}
-
-.choix_fonctionnement {
-    font-family: $font-text;
-    font-size: 1.4rem;
-    font-weight: bolder;
-    padding: 20px 0 20px 15px;
-}
-
-
-/* */
-
-.container_choix_fonctionnement {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.choix {
-    position: relative;
-}
-
-.choix p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $font-text;
-    font-size: 0.8rem;
-    background-color: $purple-color;
-    color: $white-color;
-    padding-top: 2px;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 15px;
-    left: -12px;
-}
-
-.choix i {
-    font-size: 1rem;
-    color: $black-color;
-    padding: 0px 20px 0px 0px;
-}
-
-.choix button {
-    font-family: $font-text;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: $black-color;
-    background-color: $lightgrey-color;
-    min-width: 280px;
-    height: 60px;
-    border-radius: 15px 15px 15px 15px;
-    border-style: none;
-    box-shadow: 0 1px 15px $greyshadow-color;
-    margin: 0px 0px 15px 0px;
-    &:hover {
-        font-size: 1rem;
-        color: $purple-color;
-        background-color: $lightpurple-color;
-        box-shadow: 3px 3px 3px $greyshadow-color;
-        transition: all 0.4s linear;
-    }
-}
-
-
-/* Restaurants */
-
-.liste_restaurants {
-    background-color: $lightgrey-color;
-    margin-top: 50px;
-    h2 {
-        font-family: $font-text;
-        font-size: 1.4rem;
-        font-weight: bolder;
-        color: $black-color;
-        padding: 50px 0px 30px 15px;
-    }
-}
-
-.restaurants {
-    margin-bottom: 20px;
-}
-
-.liste_fiches {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-}
-
-.fiche {
-    display: flex;
-    justify-content: center;
-    max-width: 350px;
-    flex-wrap: wrap;
-    height: auto;
-    max-height: 400px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 3px 3px 20px $greyshadow-color;
-    position: relative;
-    margin: 0 auto 30px auto;
-    &--image {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
-    &__info {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 10px 5px 10px 0px;
-        position: relative;
-        &__text {
-            color: $black-color;
-            &--nom {
-                font-family: $font-text;
-                font-size: 20px;
-                font-weight: bolder;
-            }
-            &--lieu {
-                font-family: $font-text;
-                font-size: 15px;
-                line-height: 1.3;
-            }
-        }
-    }
-    &__flag_nouveau {
-        background-color: $lightgreen-color;
-        width: fit-content;
-        padding: 10px;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        border-radius: 3px;
-        transition: transform cubic-bezier(0, 1.18, 1, 1.55) .3s;
-        &--text {
-            font-family: $font-text;
-            font-weight: bold;
-            color: $darkgreen-color;
-        }
-    }
-}
-
-@media (min-width: 300px) and (max-width: 767px) {
-    .liste_fiches {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-}
+                    /* Fonctionnement */
+                    
+                    .fonctionnement {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 50px;
+                    }
+                    
+                    .choix_fonctionnement {
+                        font-family: $font-text;
+                        font-size: 1.4rem;
+                        font-weight: bolder;
+                        padding: 20px 0 20px 15px;
+                    }
+                    /* */
+                    
+                    .container_choix_fonctionnement {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                    }
+                    
+                    .choix {
+                        position: relative;
+                    }
+                    
+                    .choix p {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: $font-text;
+                        font-size: 0.8rem;
+                        background-color: $purple-color;
+                        color: $white-color;
+                        padding-top: 2px;
+                        border-radius: 50%;
+                        width: 25px;
+                        height: 25px;
+                        position: absolute;
+                        top: 15px;
+                        left: -12px;
+                    }
+                    
+                    .choix i {
+                        font-size: 1rem;
+                        color: $black-color;
+                        padding: 0px 20px 0px 0px;
+                    }
+                    
+                    .choix button {
+                        font-family: $font-text;
+                        font-weight: bold;
+                        font-size: 0.9rem;
+                        color: $black-color;
+                        background-color: $lightgrey-color;
+                        min-width: 280px;
+                        height: 60px;
+                        border-radius: 15px 15px 15px 15px;
+                        border-style: none;
+                        box-shadow: 0 1px 15px $greyshadow-color;
+                        margin: 0px 0px 15px 0px;
+                        &:hover {
+                            font-size: 1rem;
+                            color: $purple-color;
+                            background-color: $lightpurple-color;
+                            box-shadow: 3px 3px 3px $greyshadow-color;
+                            transition: all 0.4s linear;
+                        }
+                    }
+                    /* Restaurants */
+                    
+                    .liste_restaurants {
+                        background-color: $lightgrey-color;
+                        margin-top: 50px;
+                        h2 {
+                            font-family: $font-text;
+                            font-size: 1.4rem;
+                            font-weight: bolder;
+                            color: $black-color;
+                            padding: 50px 0px 30px 15px;
+                        }
+                    }
+                    
+                    .restaurants {
+                        margin-bottom: 20px;
+                    }
+                    
+                    .liste_fiches {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+                    
+                    .fiche {
+                        display: flex;
+                        justify-content: center;
+                        max-width: 350px;
+                        flex-wrap: wrap;
+                        height: auto;
+                        max-height: 400px;
+                        border-radius: 12px;
+                        overflow: hidden;
+                        box-shadow: 3px 3px 20px $greyshadow-color;
+                        position: relative;
+                        margin: 0 auto 30px auto;
+                        &--image {
+                            width: 100%;
+                            height: 180px;
+                            object-fit: cover;
+                        }
+                        &__info {
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: space-between;
+                            padding: 10px 5px 10px 0px;
+                            position: relative;
+                            &__text {
+                                color: $black-color;
+                                &--nom {
+                                    font-family: $font-text;
+                                    font-size: 20px;
+                                    font-weight: bolder;
+                                }
+                                &--lieu {
+                                    font-family: $font-text;
+                                    font-size: 15px;
+                                    line-height: 1.3;
+                                }
+                            }
+                        }
+                        &__flag_nouveau {
+                            background-color: $lightgreen-color;
+                            width: fit-content;
+                            padding: 10px;
+                            position: absolute;
+                            top: 15px;
+                            right: 15px;
+                            border-radius: 3px;
+                            transition: transform cubic-bezier(0, 1.18, 1, 1.55) .3s;
+                            &--text {
+                                font-family: $font-text;
+                                font-weight: bold;
+                                color: $darkgreen-color;
+                            }
+                        }
+                        &__nouveau:hover {
+                            transform: perspective(150px) rotateX(360deg);
+                            .fiche__nouveau--txt {
+                                color: $black-color;
+                            }
+                        }
+                    }
+                    /* Smartphones */
+                    /* ----------- */
+                    
+                    @media (min-width: 300px) and (max-width: 767px) {
+                        .liste_fiches {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                    }

@@ -90,6 +90,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -153,8 +154,8 @@ table {
 /* Gris moyen */
 /* Gris foncé */
 /* Violet pâle */
-/* Violet */
-/* Rose */
+/* Violet - Couleur Primaire */
+/* Rose - Couleur Secondaire */
 /* Vert pâle */
 /* Vert foncé */
 /* Jaune */
@@ -183,6 +184,7 @@ Caractéristiques de la page principale du site OhMyFood
 body {
   background: #FFFFFF;
   padding-left: 0px;
+  text-decoration: none;
 }
 
 /* Localisation */
@@ -278,7 +280,7 @@ body {
   justify-content: center;
   font-family: "Roboto-Regular", Arial, sans-serif;
   font-size: 0.8rem;
-  background-color: #914ce6;
+  background-color: #9356DC;
   color: #FFFFFF;
   padding-top: 2px;
   border-radius: 50%;
@@ -310,7 +312,7 @@ body {
 }
 .choix button:hover {
   font-size: 1rem;
-  color: #914ce6;
+  color: #9356DC;
   background-color: #ece3f8;
   box-shadow: 3px 3px 3px #C8C8C8;
   transition: all 0.4s linear;
@@ -381,7 +383,7 @@ body {
   line-height: 1.3;
 }
 .fiche__flag_nouveau {
-  background-color: #81dac3;
+  background-color: #99E2D0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -397,7 +399,15 @@ body {
   font-weight: bold;
   color: #078d6c;
 }
+.fiche__nouveau:hover {
+  transform: perspective(150px) rotateX(360deg);
+}
+.fiche__nouveau:hover .fiche__nouveau--txt {
+  color: #000000;
+}
 
+/* Smartphones */
+/* ----------- */
 @media (min-width: 300px) and (max-width: 767px) {
   .liste_fiches {
     width: 100%;
@@ -427,6 +437,26 @@ footer h3 {
   padding-bottom: 1.1rem;
 }
 
+/*
+.footer {
+    background-color: $darkgrey-color;
+    padding-left: 25px;
+    line-height: 1.5;
+    padding-bottom: 25px;
+    a {
+        font-family: $font-text;
+        font-size: 1rem;
+        color: $white-color;
+    }
+    h3 {
+        font-family: $font-title;
+        font-size: 1.3rem;
+        color: $white-color;
+        padding-top: 25px;
+        padding-bottom: 1.1rem;
+    }
+}
+*/
 /* Proposer un restaurant */
 .proposition {
   display: flex;
@@ -447,6 +477,106 @@ footer h3 {
   margin: 5px 10px 5px 0px;
 }
 
+/* Animation type "loading spinner" au lancement de la page d'accueil du site OhMyFood */
+/* =================================================================================== */
+/* Chargement Page Principale */
+.animation__loading__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: cssAnimation 0s 3s forwards;
+          animation: cssAnimation 0s 3s forwards;
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: #FFFFFF;
+}
+
+/* Logo OhMyFood centré */
+.animation__loading__container--logospinner {
+  font-size: 2rem;
+  font-family: "Shrikhand-Regular", Raleway, Times, serif;
+  color: #474444;
+  position: absolute;
+}
+
+/* Animation sous forme de lignes circulaires */
+/* Ligne circulaire violette */
+.animation__loading__container--spinner {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top: 5px solid #9356DC;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+.animation__loading__container--spinner::before,
+.animation__loading__container--spinner::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid transparent;
+}
+
+/* Ligne circulaire rose */
+.animation__loading__container--spinner::before {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-top-color: #FF79DA;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+}
+
+/* Ligne circulaire vert clair */
+.animation__loading__container--spinner::after {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-top-color: #99E2D0;
+  -webkit-animation: spin 1.75s linear infinite;
+          animation: spin 1.75s linear infinite;
+}
+
+@-webkit-keyframes cssAnimation {
+  to {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@keyframes cssAnimation {
+  to {
+    visibility: hidden;
+    display: none;
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* Définitions des Boutons utilisés pour le site */
 .decouverte button,
 .submitorder {
@@ -455,7 +585,7 @@ footer h3 {
   height: 50px;
   color: #FFFFFF;
   background-color: #474444;
-  background-image: linear-gradient(350deg, #914ce6, #f673d1);
+  background-image: linear-gradient(350deg, #9356DC, #FF79DA);
   /* background-image: linear-gradient(350deg, $darkgreen-color, $yellow-color);
   Test Noé Jaune/Vert et prévoir boucle */
   border-style: none;
@@ -492,8 +622,9 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 }
 .header_page_restaurant h1 {
   font-family: "Shrikhand-Regular", Raleway, Times, serif;
+  /* font-style: italic; */
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 /* Photo du restaurant et en-tête du bloc Menus */
@@ -533,15 +664,16 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 /* Zone Bloc Menus (Entrées/Plats/Desserts) */
 .bloc_menus h3 {
   font-family: "Roboto-Regular", Arial, sans-serif;
-  border-bottom: solid 2px #81dac3;
+  border-bottom: solid 2px #99E2D0;
   width: 50px;
   margin: 20px 0 0 20px;
 }
 
 .carte_menus {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
 }
 
 /* Carte détaillée du Restaurant */
@@ -588,7 +720,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   align-items: flex-end;
   font-weight: bold;
   font-size: 0.9rem;
-  padding: 20px 10px 10px 10px;
+  padding: 20px 20px 20px 10px;
 }
 .carte__validation {
   display: flex;
@@ -598,7 +730,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   width: 30%;
   max-width: 0;
   overflow: hidden;
-  background-color: #81dac3;
+  background-color: #99E2D0;
   transition: all 0.5s linear;
 }
 .carte__validation--icone {
@@ -617,6 +749,44 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   padding: 30px 0 30px 0;
 }
 
+/* Smartphones 
+/* ========= */
+@media (min-width: 300px) and (max-width: 767px) {
+  /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Smartphone */
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .carte_menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Tablettes 
+/* ========= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  main,
+header {
+    width: Auto;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+  }
+
+  .carte_menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /*
 Style.scss
 Appel de tous les fichiers constituant l'habillage CSS du site
