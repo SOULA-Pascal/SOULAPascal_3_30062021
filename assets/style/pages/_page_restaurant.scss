@@ -1,181 +1,264 @@
-                            /* Fichier _page_restaurant.scss
+/* Fichier _page_restaurant.scss
 Caractéristiques de la page du restaurant présenté par le site OhMyFood
 */
-                            /* En-tête de la page Restaurant */
-                            
-                            .header_page_restaurant {
-                                display: block;
-                                margin: 20px 0 20px 0;
-                                a {
-                                    position: absolute;
-                                    margin: 10px 0 0 25px;
-                                    color: $black-color;
-                                    font-weight: bolder;
-                                }
-                                h1 {
-                                    font-family: $font-title;
-                                    /* font-style: italic; */
-                                    text-align: center;
-                                    font-size: 3rem;
-                                }
-                            }
-                            /* Photo du restaurant et en-tête du bloc Menus */
-                            
-                            .fiche--image {
-                                width: 100%;
-                                height: 300px;
-                                object-fit: cover;
-                            }
-                            
-                            .menus {
-                                background-color: $lightgrey-color;
-                                border-top-right-radius: 30px;
-                                border-top-left-radius: 30px;
-                                transform: translateY(-50px);
-                                margin: 0px 0px -50px 0px;
-                            }
-                            /* Nom du Restaurant */
-                            
-                            .titre {
-                                font-family: $font-title;
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: space-around;
-                                align-items: center;
-                                margin: 0px 0 20px 0;
-                                padding: 60px 0px 0px 0px;
-                                &--nom_restaurant {
-                                    font-size: 1.8rem;
-                                }
-                                &--icone {
-                                    font-size: 1.5rem;
-                                    color: $darkgrey-color;
-                                }
-                            }
-                            /* Zone Bloc Menus (Entrées/Plats/Desserts) */
-                            
-                            .bloc_menus h3 {
-                                font-family: $font-text;
-                                border-bottom: solid 2px $lightgreen-color;
-                                width: 50px;
-                                margin: 20px 0 0 20px;
-                            }
-                            
-                            .carte_menus {
-                                display: flex;
-                                flex-direction: row;
-                                align-items: center;
-                                justify-content: space-around;
-                            }
-                            /* Carte détaillée du Restaurant */
-                            
-                            .carte {
-                                font-family: $font-text;
-                                width: 350px;
-                                display: flex;
-                                align-items: stretch;
-                                justify-content: space-between;
-                                background-color: $white-color;
-                                border-radius: 15px;
-                                box-shadow: 3px 3px 5px $greyshadow-color;
-                                overflow: hidden;
-                                cursor: pointer;
-                                margin: 10px 0 10px 0;
-                                &__info {
-                                    display: flex;
-                                    flex-direction: column;
-                                    width: 50%;
-                                    padding: 10px 10px 10px 10px;
-                                    flex: 1;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                    &--nom_plat {
-                                        font-family: $font-text;
-                                        font-size: 18px;
-                                        font-weight: bold;
-                                        margin-bottom: 5px;
-                                        white-space: nowrap;
-                                        overflow: hidden;
-                                        text-overflow: ellipsis;
-                                    }
-                                    &--nom_complement {
-                                        font-family: $font-text;
-                                        white-space: nowrap;
-                                        overflow: hidden;
-                                        text-overflow: ellipsis;
-                                    }
-                                }
-                                &__prix {
-                                    display: flex;
-                                    align-items: flex-end;
-                                    font-weight: bold;
-                                    font-size: 0.9rem;
-                                    padding: 20px 20px 20px 10px;
-                                }
-                                &__validation {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    height: 60px;
-                                    width: 30%;
-                                    max-width: 0;
-                                    overflow: hidden;
-                                    background-color: $lightgreen-color;
-                                    transition: all 0.5s linear;
-                                    &--icone {
-                                        color: $white-color;
-                                        font-size: 20px;
-                                        transition: all 0.5s linear;
-                                    }
-                                }
-                                &:hover {
-                                    .carte__validation {
-                                        max-width: 50px;
-                                        &--icone {
-                                            transform: rotateZ(360deg)
-                                        }
-                                    }
-                                }
-                            }
-                            
-                            .commande {
-                                padding: 30px 0 30px 0;
-                            }
-                            /* Smartphones 
-                /* ========= */
-                            
-                            @media (min-width: 300px) and (max-width: 767px) {
-                                /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Smartphone */
-                                body {
-                                    margin-left: auto;
-                                    margin-right: auto;
-                                }
-                                .carte_menus {
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                }
-                            }
-                            /* Tablettes 
-                /* ========= */
-                            
-                            @media (min-width: 768px) and (max-width: 1024px) {
-                                main,
-                                header {
-                                    width: Auto;
-                                    max-width: 1024px;
-                                    margin-left: auto;
-                                    margin-right: auto;
-                                }
-                                body {
-                                    margin-left: auto;
-                                    margin-right: auto;
-                                    max-width: 1024px;
-                                }
-                                .carte_menus {
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                }
-                            }
+
+
+/* En-tête de la page Restaurant */
+
+.header_page_restaurant {
+    display: block;
+    margin: 20px 0 20px 0;
+    a {
+        position: absolute;
+        margin: 10px 0 0 25px;
+        color: $black-color;
+        font-weight: bolder;
+    }
+    h1 {
+        font-family: $font-title;
+        /* font-style: italic; */
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+
+/* Photo du restaurant et en-tête du bloc Menus */
+
+.fiche--image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menus_restaurant {
+    background-color: $lightgrey-color;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    transform: translateY(-50px);
+    margin: 0px 0px -50px 0px;
+}
+
+
+/* Nom du Restaurant */
+
+.titre {
+    font-family: $font-title;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 0 20px 0;
+    padding: 60px 0px 0px 0px;
+    &--nom_restaurant {
+        font-size: 1.8rem;
+    }
+    &--icone {
+        font-size: 1.5rem;
+        color: $darkgrey-color;
+    }
+}
+
+
+/* Zone Bloc Menus (Entrées/Plats/Desserts) */
+
+.bloc_menus h3 {
+    font-family: $font-text;
+    border-bottom: solid 2px $lightgreen-color;
+    width: 50px;
+    margin: 20px 0 0 20px;
+}
+
+.menus {
+    display: flex;
+    flex-direction: raw;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.entrees {
+    padding: 5px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    /*
+    align-items: center;
+    justify-content: space-around;
+    */
+}
+
+.plats {
+    padding: 5px 0px 0px 0px;
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    */
+}
+
+.desserts {
+    padding: 5px 0px 0px 0px;
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    */
+}
+
+.carte_menus {
+    display: flex;
+    flex-direction: column;
+    /* */
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* Carte détaillée du Restaurant */
+
+.carte {
+    font-family: $font-text;
+    width: 350px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: $white-color;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px $greyshadow-color;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+    /* Animation à l'arrivée des menus avec jeu sur l'opacité et le mouvement vertical des textes */
+    animation: translation_opacite 3s linear both;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 10px 10px 10px 10px;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &--nom_plat {
+            font-family: $font-text;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &--nom_complement {
+            font-family: $font-text;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &__prix {
+            display: flex;
+            align-items: flex-end;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 20px 20px 20px 10px;
+            &--texte {
+                padding: 0.5em;
+            }
+        }
+    }
+    &__validation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        width: 30%;
+        max-width: 0;
+        overflow: hidden;
+        background-color: $lightgreen-color;
+        transition: all 0.5s linear;
+        &--icone {
+            color: $white-color;
+            font-size: 20px;
+            transition: all 0.5s linear;
+        }
+    }
+    &:hover {
+        .carte__validation {
+            max-width: 50px;
+            &--icone {
+                transform: rotateZ(360deg)
+            }
+        }
+    }
+}
+
+.commande {
+    padding: 30px 0 30px 0;
+}
+
+
+/* Translation verticale des Menus 
+/* =============================== */
+
+@keyframes translation_opacite {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Smartphones 
+/* ========= */
+
+@media (min-width: 300px) and (max-width: 767px) {
+    /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Smartphone */
+    body {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .menus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .carte_menus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Tablettes 
+/* ========= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Tablettes */
+    main,
+    header {
+        width: Auto;
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1024px;
+    }
+    .menus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .carte_menus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

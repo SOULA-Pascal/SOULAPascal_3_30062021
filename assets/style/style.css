@@ -140,14 +140,22 @@ table {
 /* Liste des Polices de Caractères utilisées pour le site OhMyFood */
 @font-face {
   font-family: "Roboto-Regular";
-  src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype");
+  /* src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype"); */
+  src: url("../polices/Roboto/Roboto-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Shrikhand-Regular";
-  src: url("polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  src: url("../polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("../polices/Raleway/Raleway-Regular.ttf") format("truetype");
+}
+/* Police de Texte */
+/* Police de Logo et de Titre */
 /* Définitions des Variables utilisées pour le site */
-/* Variables de Couleurs */
+/* Variables de Couleurs 
+======================== */
 /* Noir */
 /* Blanc */
 /* Gris clair */
@@ -178,6 +186,10 @@ header {
   width: 50%;
 }
 
+/* Smartphones
+/* ----------- */
+/* Tablettes 
+/* ========= */
 /* Fichier _general.scss
 Caractéristiques de la page principale du site OhMyFood
 */
@@ -219,7 +231,7 @@ body {
 }
 
 .decouverte {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   text-align: center;
   background-color: #ebe3e3;
   padding: 50px 0 50px 0;
@@ -256,7 +268,7 @@ body {
 }
 
 .choix_fonctionnement {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   font-size: 1.4rem;
   font-weight: bolder;
   padding: 20px 0 20px 15px;
@@ -278,7 +290,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   font-size: 0.8rem;
   background-color: #9356DC;
   color: #FFFFFF;
@@ -298,7 +310,7 @@ body {
 }
 
 .choix button {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   font-weight: bold;
   font-size: 0.9rem;
   color: #000000;
@@ -324,7 +336,7 @@ body {
   margin-top: 50px;
 }
 .liste_restaurants h2 {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   font-size: 1.4rem;
   font-weight: bolder;
   color: #000000;
@@ -359,8 +371,7 @@ body {
 .fiche--image {
   width: 100%;
   height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .fiche__info {
   display: flex;
@@ -373,19 +384,17 @@ body {
   color: #000000;
 }
 .fiche__info__text--nom {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   font-size: 20px;
   font-weight: bolder;
 }
 .fiche__info__text--lieu {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   font-size: 15px;
   line-height: 1.3;
 }
 .fiche__flag_nouveau {
   background-color: #99E2D0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 10px;
   position: absolute;
@@ -395,7 +404,7 @@ body {
   transition: transform cubic-bezier(0, 1.18, 1, 1.55) 0.3s;
 }
 .fiche__flag_nouveau--text {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   font-weight: bold;
   color: #078d6c;
 }
@@ -406,7 +415,7 @@ body {
   color: #000000;
 }
 
-/* Smartphones */
+/* Smartphones
 /* ----------- */
 @media (min-width: 300px) and (max-width: 767px) {
   .liste_fiches {
@@ -417,6 +426,8 @@ body {
     align-items: center;
   }
 }
+/* Tablettes 
+/* ========= */
 /* Footer */
 footer {
   background-color: #474444;
@@ -425,38 +436,18 @@ footer {
   padding-bottom: 25px;
 }
 footer a {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   font-size: 1rem;
   color: #FFFFFF;
 }
 footer h3 {
-  font-family: "Shrikhand-Regular", Raleway, Times, serif;
+  font-family: "Shrikhand-Regular", Raleway, sans-serif;
   font-size: 1.3rem;
   color: #FFFFFF;
   padding-top: 25px;
   padding-bottom: 1.1rem;
 }
 
-/*
-.footer {
-    background-color: $darkgrey-color;
-    padding-left: 25px;
-    line-height: 1.5;
-    padding-bottom: 25px;
-    a {
-        font-family: $font-text;
-        font-size: 1rem;
-        color: $white-color;
-    }
-    h3 {
-        font-family: $font-title;
-        font-size: 1.3rem;
-        color: $white-color;
-        padding-top: 25px;
-        padding-bottom: 1.1rem;
-    }
-}
-*/
 /* Proposer un restaurant */
 .proposition {
   display: flex;
@@ -475,17 +466,21 @@ footer h3 {
   color: #FFFFFF;
   padding: 0px 20px 0px 0px;
   margin: 5px 10px 5px 0px;
+  text-align: right;
 }
 
-/* Animation type "loading spinner" au lancement de la page d'accueil du site OhMyFood */
+/* Smartphones
+/* ----------- */
+/* Tablettes 
+/* ========= */
+/* Animation type "loading spinner" au lancement de la page d'accueil du site OhMyFood
 /* =================================================================================== */
 /* Chargement Page Principale */
 .animation__loading__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation: cssAnimation 0s 3s forwards;
-          animation: cssAnimation 0s 3s forwards;
+  animation: cssAnimation 0s 3s forwards;
   visibility: visible;
   position: fixed;
   top: 0;
@@ -499,7 +494,7 @@ footer h3 {
 /* Logo OhMyFood centré */
 .animation__loading__container--logospinner {
   font-size: 2rem;
-  font-family: "Shrikhand-Regular", Raleway, Times, serif;
+  font-family: "Shrikhand-Regular", Raleway, sans-serif;
   color: #474444;
   position: absolute;
 }
@@ -514,8 +509,7 @@ footer h3 {
   border-radius: 50%;
   border: 5px solid transparent;
   border-top: 5px solid #9356DC;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 .animation__loading__container--spinner::before,
@@ -533,8 +527,7 @@ footer h3 {
   right: 5px;
   bottom: 5px;
   border-top-color: #FF79DA;
-  -webkit-animation: spin 3s linear infinite;
-          animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
 /* Ligne circulaire vert clair */
@@ -544,15 +537,7 @@ footer h3 {
   right: 15px;
   bottom: 15px;
   border-top-color: #99E2D0;
-  -webkit-animation: spin 1.75s linear infinite;
-          animation: spin 1.75s linear infinite;
-}
-
-@-webkit-keyframes cssAnimation {
-  to {
-    visibility: hidden;
-    display: none;
-  }
+  animation: spin 1.75s linear infinite;
 }
 
 @keyframes cssAnimation {
@@ -561,26 +546,23 @@ footer h3 {
     display: none;
   }
 }
-@-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes spin {
   from {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
-/* Définitions des Boutons utilisés pour le site */
+/* Définitions des Boutons utilisés pour le site 
+   ============================================= */
+/* Boutons Explorer et zone Fonctionnement  
+========================================== */
 .decouverte button,
 .submitorder {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   font-size: 1rem;
   height: 50px;
   color: #FFFFFF;
@@ -596,14 +578,54 @@ footer h3 {
   cursor: pointer;
   transform: scale(1);
   opacity: 100%;
+  /*
+  &::after {
+      transform: scale(1.02);
+      /* transform: scale(1.52); Test Noé fort grossissement 
+      opacity: 0.6;
+      box-shadow: 3px 3px 3px $darkgrey-color;
+      transition: all 0.5s linear;
+  }*/
 }
 .decouverte button:hover,
 .submitorder:hover {
   transform: scale(1.02);
   /* transform: scale(1.52); Test Noé fort grossissement */
-  opacity: 0.6;
+  opacity: 0.5;
   box-shadow: 3px 3px 3px #474444;
-  transition: all 0.5s linear;
+  transition: all 0.6s linear;
+}
+
+/* Rem : rajouter pseudo class after */
+/* Bouton Coeur  
+=============== */
+.fiche__info__coeur {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  margin: 20px;
+}
+.fiche__info__coeur--dessin_coeur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  transition: all 1s linear;
+}
+.fiche__info__coeur--dessin_coeur.empty {
+  opacity: 1;
+  color: #000000;
+}
+.fiche__info__coeur--dessin_coeur.full {
+  opacity: 0;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+}
+.fiche__info__coeur:hover .fiche__info__coeur--dessin_coeur.empty {
+  opacity: 0;
+}
+.fiche__info__coeur:hover .fiche__info__coeur--dessin_coeur.full {
+  opacity: 1;
 }
 
 /* Fichier _page_restaurant.scss
@@ -621,7 +643,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   font-weight: bolder;
 }
 .header_page_restaurant h1 {
-  font-family: "Shrikhand-Regular", Raleway, Times, serif;
+  font-family: "Shrikhand-Regular", Raleway, sans-serif;
   /* font-style: italic; */
   text-align: center;
   font-size: 3rem;
@@ -631,11 +653,10 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 .fiche--image {
   width: 100%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
-.menus {
+.menus_restaurant {
   background-color: #ebe3e3;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
@@ -645,7 +666,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 
 /* Nom du Restaurant */
 .titre {
-  font-family: "Shrikhand-Regular", Raleway, Times, serif;
+  font-family: "Shrikhand-Regular", Raleway, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -663,22 +684,58 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 
 /* Zone Bloc Menus (Entrées/Plats/Desserts) */
 .bloc_menus h3 {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   border-bottom: solid 2px #99E2D0;
   width: 50px;
   margin: 20px 0 0 20px;
 }
 
+.menus {
+  display: flex;
+  flex-direction: raw;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.entrees {
+  padding: 5px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  /*
+  align-items: center;
+  justify-content: space-around;
+  */
+}
+
+.plats {
+  padding: 5px 0px 0px 0px;
+  /*
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  */
+}
+
+.desserts {
+  padding: 5px 0px 0px 0px;
+  /*
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  */
+}
+
 .carte_menus {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  /* */
   align-items: center;
   justify-content: space-around;
 }
 
 /* Carte détaillée du Restaurant */
 .carte {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   width: 350px;
   display: flex;
   align-items: stretch;
@@ -689,6 +746,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   overflow: hidden;
   cursor: pointer;
   margin: 10px 0 10px 0;
+  /* Animation à l'arrivée des menus avec jeu sur l'opacité et le mouvement vertical des textes */
+  animation: translation_opacite 3s linear both;
 }
 .carte__info {
   display: flex;
@@ -701,7 +760,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   text-overflow: ellipsis;
 }
 .carte__info--nom_plat {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
@@ -710,23 +769,26 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   text-overflow: ellipsis;
 }
 .carte__info--nom_complement {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto-Regular", Raleway, sans-serif;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.carte__prix {
+.carte__info__prix {
   display: flex;
   align-items: flex-end;
   font-weight: bold;
   font-size: 0.9rem;
   padding: 20px 20px 20px 10px;
 }
+.carte__info__prix--texte {
+  padding: 0.5em;
+}
 .carte__validation {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  height: 70px;
   width: 30%;
   max-width: 0;
   overflow: hidden;
@@ -749,6 +811,18 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   padding: 30px 0 30px 0;
 }
 
+/* Translation verticale des Menus 
+/* =============================== */
+@keyframes translation_opacite {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* Smartphones 
 /* ========= */
 @media (min-width: 300px) and (max-width: 767px) {
@@ -756,6 +830,13 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   body {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .carte_menus {
@@ -767,6 +848,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 /* Tablettes 
 /* ========= */
 @media (min-width: 768px) and (max-width: 1024px) {
+  /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Tablettes */
   main,
 header {
     width: Auto;
@@ -781,6 +863,13 @@ header {
     max-width: 1024px;
   }
 
+  .menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
   .carte_menus {
     display: flex;
     flex-direction: column;
@@ -791,5 +880,8 @@ header {
 Style.scss
 Appel de tous les fichiers constituant l'habillage CSS du site
 <!--      Projet P3 OhMyFood Pascal SOULA 2021_06-07       -->
+<!--      Structuration selon le système 7-1               -->
 <!--      ==========================================       -->
-*//*# sourceMappingURL=style.css.map */
+*/
+
+/*# sourceMappingURL=style.css.map */

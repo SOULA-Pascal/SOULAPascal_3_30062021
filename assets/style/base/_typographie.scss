@@ -2,18 +2,29 @@
 
 @font-face {
     font-family: "Roboto-Regular";
-    src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype");
+    /* src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype"); */
+    src: url("../polices/Roboto/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Shrikhand-Regular";
-    src: url("polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+    src: url("../polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url("../polices/Raleway/Raleway-Regular.ttf") format("truetype");
+}
+
+
+/* Police de Texte */
+
 $font-text:"Roboto-Regular",
-Arial,
+Raleway,
 sans-serif;
+
+/* Police de Logo et de Titre */
+
 $font-title: "Shrikhand-Regular",
 Raleway,
-Times,
-serif;
+sans-serif;

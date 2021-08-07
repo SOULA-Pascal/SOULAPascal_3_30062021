@@ -1,4 +1,9 @@
-/* Définitions des Boutons utilisés pour le site */
+/* Définitions des Boutons utilisés pour le site 
+   ============================================= */
+
+
+/* Boutons Explorer et zone Fonctionnement  
+========================================== */
 
 .decouverte button,
 .submitorder {
@@ -21,8 +26,58 @@
     &:hover {
         transform: scale(1.02);
         /* transform: scale(1.52); Test Noé fort grossissement */
+        opacity: 0.5;
+        box-shadow: 3px 3px 3px $darkgrey-color;
+        transition: all 0.6s linear;
+    }
+    /*
+    &::after {
+        transform: scale(1.02);
+        /* transform: scale(1.52); Test Noé fort grossissement 
         opacity: 0.6;
         box-shadow: 3px 3px 3px $darkgrey-color;
         transition: all 0.5s linear;
+    }*/
+}
+
+
+/* Rem : rajouter pseudo class after */
+
+
+/* Bouton Coeur  
+=============== */
+
+.fiche__info {
+    &__coeur {
+        position: relative;
+        cursor: pointer;
+        width: 20px;
+        margin: 20px;
+        &--dessin_coeur {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            transition: all 1s linear;
+            &.empty {
+                opacity: 1;
+                color: $black-color;
+            }
+            &.full {
+                opacity: 0;
+                background: linear-gradient(0deg, $purple-color, $pink-color);
+            }
+        }
+        &:hover {
+            .fiche__info__coeur--dessin_coeur {
+                &.empty {
+                    opacity: 0;
+                }
+                &.full {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
