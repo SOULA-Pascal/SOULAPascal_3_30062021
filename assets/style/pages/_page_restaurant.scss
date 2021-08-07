@@ -27,7 +27,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 
 .fiche--image {
     width: 100%;
-    height: 300px;
+    height: 320px;
     object-fit: cover;
 }
 
@@ -72,8 +72,9 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 .menus {
     display: flex;
     flex-direction: raw;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-around;
+    margin-top: 10px;
 }
 
 .entrees {
@@ -107,9 +108,9 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 .carte_menus {
     display: flex;
     flex-direction: column;
-    /* */
     align-items: center;
     justify-content: space-around;
+    padding: 10px 0px 0px 0px;
 }
 
 
