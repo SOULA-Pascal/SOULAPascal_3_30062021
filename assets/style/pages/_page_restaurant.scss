@@ -129,7 +129,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
     cursor: pointer;
     margin: 10px 0 10px 0;
     /* Animation à l'arrivée des menus avec jeu sur l'opacité et le mouvement vertical des textes */
-    animation: translation_opacite 3s linear both;
+    animation: translation_opacite 2s linear both;
     &__info {
         display: flex;
         flex-direction: column;

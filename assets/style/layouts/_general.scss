@@ -254,4 +254,83 @@ body {
 /* Tablettes 
 /* ========= */
 
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .liste_fiches {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .fiche {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        flex-wrap: wrap;
+        height: auto;
+        max-height: 900px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 3px 3px 20px $greyshadow-color;
+        position: relative;
+        margin: 0 auto 30px auto;
+        &--image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        &__info {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 10px 5px 10px 0px;
+            position: relative;
+            &__text {
+                color: $black-color;
+                &--nom {
+                    font-family: $font-text;
+                    font-size: 20px;
+                    font-weight: bolder;
+                    padding: 0px 0px 0px 10px;
+                }
+                &--lieu {
+                    font-family: $font-text;
+                    font-size: 15px;
+                    line-height: 1.3;
+                    padding: 0px 0px 0px 10px;
+                }
+            }
+        }
+        &__flag_nouveau {
+            background-color: $lightgreen-color;
+            width: fit-content;
+            padding: 10px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            border-radius: 3px;
+            transition: transform cubic-bezier(0, 1.2, 1, 1.6) .5s;
+            &--text {
+                font-family: $font-text;
+                font-weight: bold;
+                color: $darkgreen-color;
+            }
+        }
+        &__nouveau:hover {
+            transform: perspective(150px) rotateX(90deg);
+            .fiche__nouveau--txt {
+                color: $black-color;
+            }
+        }
+    }
+    .liste_fiches {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 10px 20px 10px;
+    }
+}
