@@ -111,40 +111,20 @@ body {
     font-size: 0.8rem;
     background-color: $purple-color;
     color: $white-color;
-    padding-top: 2px;
+    padding: 2px 0px 0px 0px;
     border-radius: 50%;
     width: 25px;
     height: 25px;
     position: absolute;
     top: 15px;
-    left: -12px;
+    /* Ajustement des choix 1/2/3 par rapport au bouton */
+    left: -30px;
 }
 
 .choix i {
     font-size: 1rem;
     color: $black-color;
     padding: 0px 20px 0px 0px;
-}
-
-.choix button {
-    font-family: $font-text;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: $black-color;
-    background-color: $lightgrey-color;
-    min-width: 280px;
-    height: 60px;
-    border-radius: 15px 15px 15px 15px;
-    border-style: none;
-    box-shadow: 0 1px 15px $greyshadow-color;
-    margin: 0px 0px 15px 0px;
-    &:hover {
-        font-size: 1rem;
-        color: $purple-color;
-        background-color: $lightpurple-color;
-        box-shadow: 3px 3px 3px $greyshadow-color;
-        transition: all 0.4s linear;
-    }
 }
 
 
@@ -221,15 +201,16 @@ body {
         top: 15px;
         right: 15px;
         border-radius: 3px;
-        transition: transform cubic-bezier(0, 1.2, 1, 1.6) .5s;
+        transform: scale(1);
+        transition: transform cubic-bezier(0, 1.2, 1, 1.6) 2s;
         &--text {
             font-family: $font-text;
             font-weight: bold;
             color: $darkgreen-color;
         }
     }
-    &__nouveau:hover {
-        transform: perspective(150px) rotateX(90deg);
+    &__flag_nouveau:hover {
+        transform: perspective(150px) rotateX(180deg);
         .fiche__nouveau--txt {
             color: $black-color;
         }
@@ -310,7 +291,8 @@ body {
             top: 15px;
             right: 15px;
             border-radius: 3px;
-            transition: transform cubic-bezier(0, 1.2, 1, 1.6) .5s;
+            /* transition: transform cubic-bezier(0, 1.2, 1, 1.6) .5s; */
+            transition: transform 1000ms ease-in;
             &--text {
                 font-family: $font-text;
                 font-weight: bold;

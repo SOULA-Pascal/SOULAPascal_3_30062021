@@ -52,6 +52,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
     padding: 60px 0px 0px 0px;
     &--nom_restaurant {
         font-size: 1.8rem;
+        font-family: $font-title;
     }
     &--icone {
         font-size: 1.5rem;

@@ -1,24 +1,5 @@
-/* Liste des Polices de Caractères utilisées pour le site OhMyFood */
-
-@font-face {
-    font-family: "Roboto-Regular";
-    /* src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype"); */
-    /* src: url("../../polices/Roboto/Roboto-Regular.ttf") format("truetype"); */
-    /* src: url("../../../assets/polices/Roboto/Roboto-Regular.ttf") format("truetype"); */
-    src: url("/assets/polices/Roboto/Roboto-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Shrikhand-Regular";
-    /* src: url("../../../assets/polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype"); */
-    src: url("/assets/polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Raleway-Regular";
-    /* src: url("../../../assets/polices/Raleway/Raleway-Regular.ttf") format("truetype"); */
-    src: url("/assets/polices/Raleway/Raleway-Regular.ttf") format("truetype");
-}
+/* Liste des Polices de Caractères utilisées pour le site OhMyFood 
+   =============================================================== */
 
 
 /* Police de Texte */
@@ -29,6 +10,48 @@ sans-serif;
 
 /* Police de Logo et de Titre */
 
+$font-title: 'Shrikhand',
+cursive;
+
+/* Version initiale fonctionnant de façon aléatoire 
+
+/*
+@font-face {
+    font-family: "Roboto-Regular";
+    /* src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype");
+    /* src: url("../../polices/Roboto/Roboto-Regular.ttf") format("truetype");
+    /* src: url("../../../assets/polices/Roboto/Roboto-Regular.ttf") format("truetype");
+    /* src: url("/assets/polices/Roboto/Roboto-Regular.ttf") format("truetype");
+    }
+*/
+
+
+/*
+@font-face {
+    font-family: "Shrikhand-Regular";
+    /* src: url("../../../assets/polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+    /* src: url("/assets/polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+*/
+
+
+/*
+@font-face {
+    font-family: "Raleway-Regular";
+    /* src: url("../../../assets/polices/Raleway/Raleway-Regular.ttf") format("truetype"); 
+    /* src: url("/assets/polices/Raleway/Raleway-Regular.ttf") format("truetype");
+}
+*/
+
+
+/*
+
 $font-title: "Shrikhand-Regular",
 Raleway,
 sans-serif;
+
+
+$font-text:"Roboto-Regular",
+Raleway,
+sans-serif;
+
+*/

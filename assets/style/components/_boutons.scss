@@ -23,25 +23,48 @@
     cursor: pointer;
     transform: scale(1);
     opacity: 100%;
+    /* permet de dégonfler le bouton après l'avoir gonflé */
+    transition-property: transform;
+    transition-duration: 400ms;
     &:hover {
-        transform: scale(1.02);
+        /* Permet de gonfler le bouton au moment du survol par la souris */
+        transform: scale(1.08);
         /* transform: scale(1.52); Test Noé fort grossissement */
-        opacity: 0.5;
+        opacity: 0.7;
         box-shadow: 3px 3px 3px $darkgrey-color;
         transition: all 0.6s linear;
     }
-    /*
-    &::after {
-        transform: scale(1.02);
-        /* transform: scale(1.52); Test Noé fort grossissement 
-        opacity: 0.6;
-        box-shadow: 3px 3px 3px $darkgrey-color;
-        transition: all 0.5s linear;
-    }*/
 }
 
-
-/* Rem : rajouter pseudo class after */
+.choix button {
+    font-family: $font-text;
+    font-weight: bold;
+    font-size: 1rem;
+    color: $black-color;
+    background-color: $lightgrey-color;
+    min-width: 280px;
+    height: 60px;
+    border-radius: 15px 15px 15px 15px;
+    border-style: none;
+    box-shadow: 0 1px 15px $greyshadow-color;
+    margin: 0px 0px 15px 0px;
+    cursor: pointer;
+    transform: scale(1);
+    opacity: 100%;
+    /* permet de dégonfler le bouton après l'avoir gonflé */
+    transition-property: transform;
+    transition-duration: 400ms;
+    &:hover {
+        font-size: 1rem;
+        color: $purple-color;
+        background-color: $lightpurple-color;
+        box-shadow: 3px 3px 3px $greyshadow-color;
+        /* Permet de gonfler le bouton au moment du survol par la souris */
+        transform: scale(1.02);
+        opacity: 0.7;
+        transition: all 0.5s linear;
+    }
+}
 
 
 /* Bouton Coeur  
@@ -81,83 +104,13 @@
     transition: all 1000ms;
     transform: scale(0);
     transform-origin: bottom;
-}
-
-
-/*
-.fiche__info {
-    &__coeur {
-        position: relative;
-        width: 20px;
-        margin: 20px;
-        &--dessin_coeur {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1, 4em;
-            transition: all 1s linear;
-            &.empty {
-                opacity: 1;
-                color: $black-color;
-            }
-            &.full {
-                opacity: 0;
-                background: linear-gradient(0deg, $purple-color, $pink-color);
-            }
-        }
-        &:hover {
-            .fiche__info__coeur--dessin_coeur {
-                &.empty {
-                    opacity: 0;
-                }
-                &.full {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-*/
-
-
-/*
-.fa-heart {
-    cursor: pointer;
-  }
-  .fa-heart__content {
-    font-size: 1.4em;
-  }
-  .fa-heart__content_empty {
     position: relative;
-    right: 22px;
-  }
-  
-  .fa-heart__box {
-    position: relative;
-    left: 21px;
-  }
-  .fa-heart__box:hover > .fa-heart_full {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .fa-heart_full {
-    color: #ff79da;
-    background: #ff79da;
-    background: linear-gradient(63deg, #ff79da 0%, #9356dc 100%);
-    background-clip: border-box;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    opacity: 0;
-    transition: all 1000ms;
-    transform: scale(0);
-    transform-origin: bottom;
-  }
-*/
+    left: 17%;
+}
 
 
 /* Bouton Coeur  Version initiale
-=============== 
+   ==============================
 
 .fiche__info {
     &__coeur {

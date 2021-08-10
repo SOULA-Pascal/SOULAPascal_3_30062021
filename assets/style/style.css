@@ -137,26 +137,46 @@ table {
   border-spacing: 0;
 }
 
-/* Liste des Polices de Caractères utilisées pour le site OhMyFood */
-@font-face {
-  font-family: "Roboto-Regular";
-  /* src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype"); */
-  /* src: url("../../polices/Roboto/Roboto-Regular.ttf") format("truetype"); */
-  /* src: url("../../../assets/polices/Roboto/Roboto-Regular.ttf") format("truetype"); */
-  src: url("/assets/polices/Roboto/Roboto-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Shrikhand-Regular";
-  /* src: url("../../../assets/polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype"); */
-  src: url("/assets/polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Raleway-Regular";
-  /* src: url("../../../assets/polices/Raleway/Raleway-Regular.ttf") format("truetype"); */
-  src: url("/assets/polices/Raleway/Raleway-Regular.ttf") format("truetype");
-}
+/* Liste des Polices de Caractères utilisées pour le site OhMyFood 
+   =============================================================== */
 /* Police de Texte */
 /* Police de Logo et de Titre */
+/* Version initiale fonctionnant de façon aléatoire 
+
+/*
+@font-face {
+    font-family: "Roboto-Regular";
+    /* src: url("polices/Roboto/Roboto-Regular.ttf") format("truetype");
+    /* src: url("../../polices/Roboto/Roboto-Regular.ttf") format("truetype");
+    /* src: url("../../../assets/polices/Roboto/Roboto-Regular.ttf") format("truetype");
+    /* src: url("/assets/polices/Roboto/Roboto-Regular.ttf") format("truetype");
+    }
+*/
+/*
+@font-face {
+    font-family: "Shrikhand-Regular";
+    /* src: url("../../../assets/polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+    /* src: url("/assets/polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+*/
+/*
+@font-face {
+    font-family: "Raleway-Regular";
+    /* src: url("../../../assets/polices/Raleway/Raleway-Regular.ttf") format("truetype"); 
+    /* src: url("/assets/polices/Raleway/Raleway-Regular.ttf") format("truetype");
+}
+*/
+/*
+
+$font-title: "Shrikhand-Regular",
+Raleway,
+sans-serif;
+
+
+$font-text:"Roboto-Regular",
+Raleway,
+sans-serif;
+
+*/
 /* Définitions des Variables utilisées pour le site */
 /* Variables de Couleurs 
 ======================== */
@@ -298,40 +318,20 @@ body {
   font-size: 0.8rem;
   background-color: #9356DC;
   color: #FFFFFF;
-  padding-top: 2px;
+  padding: 2px 0px 0px 0px;
   border-radius: 50%;
   width: 25px;
   height: 25px;
   position: absolute;
   top: 15px;
-  left: -12px;
+  /* Ajustement des choix 1/2/3 par rapport au bouton */
+  left: -30px;
 }
 
 .choix i {
   font-size: 1rem;
   color: #000000;
   padding: 0px 20px 0px 0px;
-}
-
-.choix button {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: #000000;
-  background-color: #ebe3e3;
-  min-width: 280px;
-  height: 60px;
-  border-radius: 15px 15px 15px 15px;
-  border-style: none;
-  box-shadow: 0 1px 15px #C8C8C8;
-  margin: 0px 0px 15px 0px;
-}
-.choix button:hover {
-  font-size: 1rem;
-  color: #9356DC;
-  background-color: #ece3f8;
-  box-shadow: 3px 3px 3px #C8C8C8;
-  transition: all 0.4s linear;
 }
 
 /* Restaurants */
@@ -375,7 +375,8 @@ body {
 .fiche--image {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .fiche__info {
   display: flex;
@@ -401,23 +402,26 @@ body {
 }
 .fiche__flag_nouveau {
   background-color: #99E2D0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 10px;
   position: absolute;
   top: 15px;
   right: 15px;
   border-radius: 3px;
-  transition: transform cubic-bezier(0, 1.2, 1, 1.6) 0.5s;
+  transform: scale(1);
+  transition: transform cubic-bezier(0, 1.2, 1, 1.6) 2s;
 }
 .fiche__flag_nouveau--text {
   font-family: "Roboto-Regular", Raleway, sans-serif;
   font-weight: bold;
   color: #078d6c;
 }
-.fiche__nouveau:hover {
-  transform: perspective(150px) rotateX(90deg);
+.fiche__flag_nouveau:hover {
+  transform: perspective(150px) rotateX(180deg);
 }
-.fiche__nouveau:hover .fiche__nouveau--txt {
+.fiche__flag_nouveau:hover .fiche__nouveau--txt {
   color: #000000;
 }
 
@@ -460,7 +464,8 @@ body {
   .fiche--image {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .fiche__info {
     display: flex;
@@ -486,13 +491,16 @@ body {
   }
   .fiche__flag_nouveau {
     background-color: #99E2D0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     padding: 10px;
     position: absolute;
     top: 15px;
     right: 15px;
     border-radius: 3px;
-    transition: transform cubic-bezier(0, 1.2, 1, 1.6) 0.5s;
+    /* transition: transform cubic-bezier(0, 1.2, 1, 1.6) .5s; */
+    transition: transform 1000ms ease-in;
   }
   .fiche__flag_nouveau--text {
     font-family: "Roboto-Regular", Raleway, sans-serif;
@@ -529,7 +537,7 @@ footer a {
   color: #FFFFFF;
 }
 footer h3 {
-  font-family: "Shrikhand-Regular", Raleway, sans-serif;
+  font-family: "Shrikhand", cursive;
   font-size: 1.3rem;
   color: #FFFFFF;
   padding-top: 25px;
@@ -568,7 +576,8 @@ footer h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: cssAnimation 0s 3s forwards;
+  -webkit-animation: cssAnimation 0s 3s forwards;
+          animation: cssAnimation 0s 3s forwards;
   visibility: visible;
   position: fixed;
   top: 0;
@@ -582,7 +591,7 @@ footer h3 {
 /* Logo OhMyFood centré */
 .animation__loading__container--logospinner {
   font-size: 2rem;
-  font-family: "Shrikhand-Regular", Raleway, sans-serif;
+  font-family: "Shrikhand", cursive;
   color: #474444;
   position: absolute;
 }
@@ -597,7 +606,8 @@ footer h3 {
   border-radius: 50%;
   border: 5px solid transparent;
   border-top: 5px solid #9356DC;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
 }
 
 .animation__loading__container--spinner::before,
@@ -615,7 +625,8 @@ footer h3 {
   right: 5px;
   bottom: 5px;
   border-top-color: #FF79DA;
-  animation: spin 1.5s linear infinite;
+  -webkit-animation: spin 1.5s linear infinite;
+          animation: spin 1.5s linear infinite;
 }
 
 /* Ligne circulaire vert clair */
@@ -625,7 +636,15 @@ footer h3 {
   right: 15px;
   bottom: 15px;
   border-top-color: #99E2D0;
-  animation: spin 1.5s linear infinite;
+  -webkit-animation: spin 1.5s linear infinite;
+          animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes cssAnimation {
+  to {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 @keyframes cssAnimation {
@@ -634,13 +653,19 @@ footer h3 {
     display: none;
   }
 }
-@keyframes spin {
+@-webkit-keyframes spin {
   from {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
     transform: rotate(360deg);
   }
 }
@@ -666,25 +691,50 @@ footer h3 {
   cursor: pointer;
   transform: scale(1);
   opacity: 100%;
-  /*
-  &::after {
-      transform: scale(1.02);
-      /* transform: scale(1.52); Test Noé fort grossissement 
-      opacity: 0.6;
-      box-shadow: 3px 3px 3px $darkgrey-color;
-      transition: all 0.5s linear;
-  }*/
+  /* permet de dégonfler le bouton après l'avoir gonflé */
+  transition-property: transform;
+  transition-duration: 400ms;
 }
 .decouverte button:hover,
 .submitorder:hover {
-  transform: scale(1.02);
+  /* Permet de gonfler le bouton au moment du survol par la souris */
+  transform: scale(1.08);
   /* transform: scale(1.52); Test Noé fort grossissement */
-  opacity: 0.5;
+  opacity: 0.7;
   box-shadow: 3px 3px 3px #474444;
   transition: all 0.6s linear;
 }
 
-/* Rem : rajouter pseudo class after */
+.choix button {
+  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000000;
+  background-color: #ebe3e3;
+  min-width: 280px;
+  height: 60px;
+  border-radius: 15px 15px 15px 15px;
+  border-style: none;
+  box-shadow: 0 1px 15px #C8C8C8;
+  margin: 0px 0px 15px 0px;
+  cursor: pointer;
+  transform: scale(1);
+  opacity: 100%;
+  /* permet de dégonfler le bouton après l'avoir gonflé */
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+.choix button:hover {
+  font-size: 1rem;
+  color: #9356DC;
+  background-color: #ece3f8;
+  box-shadow: 3px 3px 3px #C8C8C8;
+  /* Permet de gonfler le bouton au moment du survol par la souris */
+  transform: scale(1.02);
+  opacity: 0.7;
+  transition: all 0.5s linear;
+}
+
 /* Bouton Coeur  
 =============== */
 .fa-heart {
@@ -721,78 +771,12 @@ footer h3 {
   transition: all 1000ms;
   transform: scale(0);
   transform-origin: bottom;
+  position: relative;
+  left: 17%;
 }
 
-/*
-.fiche__info {
-    &__coeur {
-        position: relative;
-        width: 20px;
-        margin: 20px;
-        &--dessin_coeur {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1, 4em;
-            transition: all 1s linear;
-            &.empty {
-                opacity: 1;
-                color: $black-color;
-            }
-            &.full {
-                opacity: 0;
-                background: linear-gradient(0deg, $purple-color, $pink-color);
-            }
-        }
-        &:hover {
-            .fiche__info__coeur--dessin_coeur {
-                &.empty {
-                    opacity: 0;
-                }
-                &.full {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-*/
-/*
-.fa-heart {
-    cursor: pointer;
-  }
-  .fa-heart__content {
-    font-size: 1.4em;
-  }
-  .fa-heart__content_empty {
-    position: relative;
-    right: 22px;
-  }
-
-  .fa-heart__box {
-    position: relative;
-    left: 21px;
-  }
-  .fa-heart__box:hover > .fa-heart_full {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .fa-heart_full {
-    color: #ff79da;
-    background: #ff79da;
-    background: linear-gradient(63deg, #ff79da 0%, #9356dc 100%);
-    background-clip: border-box;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    opacity: 0;
-    transition: all 1000ms;
-    transform: scale(0);
-    transform-origin: bottom;
-  }
-*/
 /* Bouton Coeur  Version initiale
-=============== 
+   ==============================
 
 .fiche__info {
     &__coeur {
@@ -844,7 +828,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   font-weight: bolder;
 }
 .header_page_restaurant h1 {
-  font-family: "Shrikhand-Regular", Raleway, sans-serif;
+  font-family: "Shrikhand", cursive;
   /* font-style: italic; */
   text-align: center;
   font-size: 3rem;
@@ -854,7 +838,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 .fiche--image {
   width: 100%;
   height: 320px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menus_restaurant {
@@ -867,7 +852,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 
 /* Nom du Restaurant */
 .titre {
-  font-family: "Shrikhand-Regular", Raleway, sans-serif;
+  font-family: "Shrikhand", cursive;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -877,6 +862,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 }
 .titre--nom_restaurant {
   font-size: 1.8rem;
+  font-family: "Shrikhand", cursive;
 }
 .titre--icone {
   font-size: 1.5rem;
@@ -949,7 +935,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   cursor: pointer;
   margin: 10px 0 10px 0;
   /* Animation à l'arrivée des menus avec jeu sur l'opacité et le mouvement vertical des textes */
-  animation: translation_opacite 2s linear both;
+  -webkit-animation: translation_opacite 2s linear both;
+          animation: translation_opacite 2s linear both;
 }
 .carte__info {
   display: flex;
@@ -1015,6 +1002,16 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 
 /* Translation verticale des Menus 
 /* =============================== */
+@-webkit-keyframes translation_opacite {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes translation_opacite {
   0% {
     transform: translateY(100%);
@@ -1084,6 +1081,4 @@ Appel de tous les fichiers constituant l'habillage CSS du site
 <!--      Projet P3 OhMyFood Pascal SOULA 2021_06-07       -->
 <!--      Structuration selon le système 7-1               -->
 <!--      ==========================================       -->
-*/
-
-/*# sourceMappingURL=style.css.map */
+*//*# sourceMappingURL=style.css.map */
