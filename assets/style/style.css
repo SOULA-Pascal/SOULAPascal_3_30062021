@@ -325,7 +325,7 @@ body {
   position: absolute;
   top: 15px;
   /* Ajustement des choix 1/2/3 par rapport au bouton */
-  left: -30px;
+  left: -25px;
 }
 
 .choix i {
@@ -557,12 +557,18 @@ footer h3 {
 }
 
 /* Caractères spéciaux pour liens Proposer un restaurant et Devenir partenaire */
-.caractere_awesome {
+.caractere_awesome_utensils {
   font-size: 0.8rem;
   color: #FFFFFF;
   padding: 0px 20px 0px 0px;
   margin: 5px 10px 5px 0px;
-  text-align: right;
+}
+
+.caractere_awesome_hands-helping {
+  font-size: 0.8rem;
+  color: #FFFFFF;
+  padding: 0px 15px 0px 0px;
+  margin: 5px 10px 5px 0px;
 }
 
 /* Smartphones
