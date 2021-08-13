@@ -20,7 +20,8 @@
     padding: 0 20px 0 20px;
     margin: 15px auto 0 auto;
     display: block;
-    cursor: pointer;
+    cursor: grab;
+    /* cursor: pointer = flèche => grab permet d'avoir une main au survol de la zone */
     transform: scale(1);
     opacity: 100%;
     /* permet de dégonfler le bouton après l'avoir gonflé */

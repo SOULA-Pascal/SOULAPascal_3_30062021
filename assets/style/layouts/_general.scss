@@ -30,7 +30,7 @@ body {
     padding: 5px 5px 5px 5px;
     border-style: solid;
     border-top-width: 3px;
-    border-color: $darkgrey-color;
+    border-color: $greyshadow-color;
     background-color: $mediumgrey-color;
 }
 
@@ -166,6 +166,10 @@ body {
     box-shadow: 3px 3px 20px $greyshadow-color;
     position: relative;
     margin: 0 auto 30px auto;
+    transform: scale(1);
+    /* permet de dégonfler le bloc image après l'avoir gonflé */
+    transition-property: transform;
+    transition-duration: 400ms;
     &--image {
         width: 100%;
         height: 180px;
@@ -214,6 +218,12 @@ body {
         .fiche__nouveau--txt {
             color: $black-color;
         }
+    }
+    &:hover {
+        box-shadow: 3px 3px 3px $darkgrey-color;
+        /* Permet de gonfler le bloc image au moment du survol par la souris */
+        transform: scale(1.02);
+        transition: all 0.8s linear;
     }
 }
 

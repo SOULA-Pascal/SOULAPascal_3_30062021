@@ -197,6 +197,7 @@ Variables de Pages
 */
 /* Ombre grisée */
 /* Couleur Background */
+/* $background-color: #EAEAEA; */
 /* Header OhMyFood */
 header {
   display: flex;
@@ -243,8 +244,8 @@ body {
   padding: 5px 5px 5px 5px;
   border-style: solid;
   border-top-width: 3px;
-  border-color: #474444;
-  background-color: #aaa7a7;
+  border-color: #C8C8C8;
+  background-color: #EAEAEA;
 }
 
 .input_localisation {
@@ -257,7 +258,7 @@ body {
 .decouverte {
   font-family: "Roboto-Regular", Raleway, sans-serif;
   text-align: center;
-  background-color: #ebe3e3;
+  background-color: #F6F6F6;
   padding: 50px 0 50px 0;
 }
 .decouverte h1 {
@@ -336,7 +337,7 @@ body {
 
 /* Restaurants */
 .liste_restaurants {
-  background-color: #ebe3e3;
+  background-color: #F6F6F6;
   margin-top: 50px;
 }
 .liste_restaurants h2 {
@@ -371,6 +372,10 @@ body {
   box-shadow: 3px 3px 20px #C8C8C8;
   position: relative;
   margin: 0 auto 30px auto;
+  transform: scale(1);
+  /* permet de dégonfler le bloc image après l'avoir gonflé */
+  transition-property: transform;
+  transition-duration: 400ms;
 }
 .fiche--image {
   width: 100%;
@@ -423,6 +428,12 @@ body {
 }
 .fiche__flag_nouveau:hover .fiche__nouveau--txt {
   color: #000000;
+}
+.fiche:hover {
+  box-shadow: 3px 3px 3px #474444;
+  /* Permet de gonfler le bloc image au moment du survol par la souris */
+  transform: scale(1.02);
+  transition: all 0.8s linear;
 }
 
 /* Smartphones
@@ -544,6 +555,10 @@ footer h3 {
   padding-bottom: 1.1rem;
 }
 
+footer a:hover {
+  color: #9356DC;
+}
+
 /* Proposer un restaurant */
 .proposition {
   display: flex;
@@ -557,7 +572,7 @@ footer h3 {
 }
 
 /* Caractères spéciaux pour liens Proposer un restaurant et Devenir partenaire */
-.caractere_awesome_utensils {
+.caractere_awesome_ustensils {
   font-size: 0.8rem;
   color: #FFFFFF;
   padding: 0px 20px 0px 0px;
@@ -694,7 +709,9 @@ footer h3 {
   padding: 0 20px 0 20px;
   margin: 15px auto 0 auto;
   display: block;
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
+  /* cursor: pointer = flèche => grab permet d'avoir une main au survol de la zone */
   transform: scale(1);
   opacity: 100%;
   /* permet de dégonfler le bouton après l'avoir gonflé */
@@ -716,7 +733,7 @@ footer h3 {
   font-weight: bold;
   font-size: 1rem;
   color: #000000;
-  background-color: #ebe3e3;
+  background-color: #F6F6F6;
   min-width: 280px;
   height: 60px;
   border-radius: 15px 15px 15px 15px;
@@ -849,7 +866,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 }
 
 .menus_restaurant {
-  background-color: #ebe3e3;
+  background-color: #F6F6F6;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   transform: translateY(-50px);
@@ -947,8 +964,10 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 .carte__info {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 50%;
-  padding: 10px 10px 10px 10px;
+  /* padding: 10px 10px 10px 10px; */
+  padding: 1em;
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
