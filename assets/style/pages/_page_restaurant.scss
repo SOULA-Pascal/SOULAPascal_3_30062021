@@ -132,7 +132,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
     /* Animation à l'arrivée des menus avec jeu sur l'opacité et le mouvement vertical des textes */
     animation: translation_opacite 2s linear both;
     &__info {
-        display: flex;
+        /* display: flex; */
+        /* flex supprimé sinon, l'ellipsis ne joue pas son rôle */
         flex-direction: column;
         flex-wrap: wrap;
         width: 50%;
@@ -147,7 +148,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
             font-family: $font-text;
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -157,12 +158,13 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            padding: 3px 0px 0px 0px;
         }
         &__prix {
             display: flex;
             align-items: flex-end;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1rem;
             padding: 20px 20px 20px 10px;
             &--texte {
                 padding: 0.5em;
@@ -260,7 +262,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
         /* Animation à l'arrivée des menus avec jeu sur l'opacité et le mouvement vertical des textes */
         animation: translation_opacite 2s linear both;
         &__info {
-            display: flex;
+            /* display: flex; */
+            /* flex supprimé sinon, l'ellipsis ne joue pas son rôle */
             flex-direction: column;
             flex-wrap: wrap;
             width: 50%;

@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: cssAnimation 0s 3s forwards;
+    animation: cssAnimation 0s 2.5s forwards;
     visibility: visible;
     position: fixed;
     top: 0;
@@ -43,7 +43,7 @@
     border-radius: 50%;
     border: 5px solid transparent;
     border-top: 5px solid $purple-color;
-    animation: spin 2s linear infinite;
+    animation: spin 1.5s linear infinite;
 }
 
 .animation__loading__container--spinner::before,
@@ -63,7 +63,7 @@
     right: 5px;
     bottom: 5px;
     border-top-color: $pink-color;
-    animation: spin 1.5s linear infinite;
+    animation: spin 1.3s linear infinite;
 }
 
 
@@ -75,7 +75,7 @@
     right: 15px;
     bottom: 15px;
     border-top-color: $lightgreen-color;
-    animation: spin 1.5s linear infinite;
+    animation: spin 1.2s linear infinite;
 }
 
 @keyframes cssAnimation {

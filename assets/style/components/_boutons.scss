@@ -76,12 +76,12 @@
 }
 
 .fa-heart__content {
-    font-size: 1.6em;
+    font-size: 1.9em;
 }
 
 .fa-heart__content_empty {
     position: relative;
-    right: 22px;
+    right: 27px;
 }
 
 .fa-heart__box {
@@ -92,6 +92,8 @@
 .fa-heart__box:hover>.fa-heart_full {
     opacity: 1;
     transform: scale(1);
+    /* permet de superposer le coeur */
+    z-index: 2;
 }
 
 .fa-heart_full {

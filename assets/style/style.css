@@ -326,7 +326,9 @@ body {
   position: absolute;
   top: 15px;
   /* Ajustement des choix 1/2/3 par rapport au bouton */
-  left: -25px;
+  left: -17px;
+  /* Pastille 1/2/3 devant le bouton de navigation */
+  z-index: 2;
 }
 
 .choix i {
@@ -587,8 +589,8 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation: cssAnimation 0s 3s forwards;
-          animation: cssAnimation 0s 3s forwards;
+  -webkit-animation: cssAnimation 0s 2.5s forwards;
+          animation: cssAnimation 0s 2.5s forwards;
   visibility: visible;
   position: fixed;
   top: 0;
@@ -617,8 +619,8 @@ footer a:hover {
   border-radius: 50%;
   border: 5px solid transparent;
   border-top: 5px solid #9356DC;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
+  -webkit-animation: spin 1.5s linear infinite;
+          animation: spin 1.5s linear infinite;
 }
 
 .animation__loading__container--spinner::before,
@@ -636,8 +638,8 @@ footer a:hover {
   right: 5px;
   bottom: 5px;
   border-top-color: #FF79DA;
-  -webkit-animation: spin 1.5s linear infinite;
-          animation: spin 1.5s linear infinite;
+  -webkit-animation: spin 1.3s linear infinite;
+          animation: spin 1.3s linear infinite;
 }
 
 /* Ligne circulaire vert clair */
@@ -647,8 +649,8 @@ footer a:hover {
   right: 15px;
   bottom: 15px;
   border-top-color: #99E2D0;
-  -webkit-animation: spin 1.5s linear infinite;
-          animation: spin 1.5s linear infinite;
+  -webkit-animation: spin 1.2s linear infinite;
+          animation: spin 1.2s linear infinite;
 }
 
 @-webkit-keyframes cssAnimation {
@@ -755,12 +757,12 @@ footer a:hover {
 }
 
 .fa-heart__content {
-  font-size: 1.6em;
+  font-size: 1.9em;
 }
 
 .fa-heart__content_empty {
   position: relative;
-  right: 22px;
+  right: 27px;
 }
 
 .fa-heart__box {
@@ -771,6 +773,8 @@ footer a:hover {
 .fa-heart__box:hover > .fa-heart_full {
   opacity: 1;
   transform: scale(1);
+  /* permet de superposer le coeur */
+  z-index: 2;
 }
 
 .fa-heart_full {
@@ -952,7 +956,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
           animation: translation_opacite 2s linear both;
 }
 .carte__info {
-  display: flex;
+  /* display: flex; */
+  /* flex supprimé sinon, l'ellipsis ne joue pas son rôle */
   flex-direction: column;
   flex-wrap: wrap;
   width: 50%;
@@ -968,7 +973,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   font-family: "Roboto-Regular", Raleway, sans-serif;
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -978,12 +983,13 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 3px 0px 0px 0px;
 }
 .carte__info__prix {
   display: flex;
   align-items: flex-end;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 20px 20px 20px 10px;
 }
 .carte__info__prix--texte {
@@ -1088,7 +1094,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
             animation: translation_opacite 2s linear both;
   }
   .carte__info {
-    display: flex;
+    /* display: flex; */
+    /* flex supprimé sinon, l'ellipsis ne joue pas son rôle */
     flex-direction: column;
     flex-wrap: wrap;
     width: 50%;

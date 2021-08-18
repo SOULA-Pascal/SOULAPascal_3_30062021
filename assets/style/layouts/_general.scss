@@ -118,7 +118,9 @@ body {
     position: absolute;
     top: 15px;
     /* Ajustement des choix 1/2/3 par rapport au bouton */
-    left: -25px;
+    left: -17px;
+    /* Pastille 1/2/3 devant le bouton de navigation */
+    z-index: 2;
 }
 
 .choix i {
