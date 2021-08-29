@@ -57,7 +57,7 @@
     transition-duration: 400ms;
     &:hover {
         font-size: 1rem;
-        color: $purple-color;
+        /* color: $purple-color; */
         background-color: $lightpurple-color;
         box-shadow: 3px 3px 3px $greyshadow-color;
         /* Permet de gonfler le bouton au moment du survol par la souris */
@@ -76,12 +76,14 @@
 }
 
 .fa-heart__content {
-    font-size: 1.9em;
+    /* font-size: 1.9em; */
+    font-size: 2em;
 }
 
 .fa-heart__content_empty {
+    color: $black-color;
     position: relative;
-    right: 27px;
+    right: 28px;
 }
 
 .fa-heart__box {

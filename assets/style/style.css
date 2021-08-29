@@ -256,7 +256,7 @@ body {
 }
 
 .decouverte {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   background-color: #F6F6F6;
   padding: 50px 0 50px 0;
@@ -293,7 +293,7 @@ body {
 }
 
 .choix_fonctionnement {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
   font-weight: bolder;
   padding: 20px 0 20px 15px;
@@ -315,7 +315,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   background-color: #9356DC;
   color: #FFFFFF;
@@ -343,7 +343,7 @@ body {
   margin-top: 50px;
 }
 .liste_restaurants h2 {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
   font-weight: bolder;
   color: #000000;
@@ -396,13 +396,13 @@ body {
   color: #000000;
 }
 .fiche__info__text--nom {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: bolder;
   padding: 0px 0px 0px 10px;
 }
 .fiche__info__text--lieu {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
   line-height: 1.3;
   padding: 0px 0px 0px 10px;
@@ -421,7 +421,7 @@ body {
   transition: transform cubic-bezier(0, 1.2, 1, 1.6) 2s;
 }
 .fiche__flag_nouveau--text {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: #078d6c;
 }
@@ -491,13 +491,13 @@ body {
     color: #000000;
   }
   .fiche__info__text--nom {
-    font-family: "Roboto-Regular", Raleway, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-weight: bolder;
     padding: 0px 0px 0px 10px;
   }
   .fiche__info__text--lieu {
-    font-family: "Roboto-Regular", Raleway, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 15px;
     line-height: 1.3;
     padding: 0px 0px 0px 10px;
@@ -516,7 +516,7 @@ body {
     transition: transform 1000ms ease-in;
   }
   .fiche__flag_nouveau--text {
-    font-family: "Roboto-Regular", Raleway, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #078d6c;
   }
@@ -535,7 +535,7 @@ footer {
   padding-bottom: 25px;
 }
 footer a {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   color: #FFFFFF;
 }
@@ -688,7 +688,7 @@ footer a:hover {
 ========================================== */
 .decouverte button,
 .submitorder {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   height: 50px;
   color: #FFFFFF;
@@ -721,7 +721,7 @@ footer a:hover {
 }
 
 .choix button {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1rem;
   color: #000000;
@@ -741,7 +741,7 @@ footer a:hover {
 }
 .choix button:hover {
   font-size: 1rem;
-  color: #9356DC;
+  /* color: $purple-color; */
   background-color: #ece3f8;
   box-shadow: 3px 3px 3px #C8C8C8;
   /* Permet de gonfler le bouton au moment du survol par la souris */
@@ -757,12 +757,14 @@ footer a:hover {
 }
 
 .fa-heart__content {
-  font-size: 1.9em;
+  /* font-size: 1.9em; */
+  font-size: 2em;
 }
 
 .fa-heart__content_empty {
+  color: #000000;
   position: relative;
-  right: 27px;
+  right: 28px;
 }
 
 .fa-heart__box {
@@ -888,7 +890,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 
 /* Zone Bloc Menus (Entrées/Plats/Desserts) */
 .bloc_menus h3 {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   border-bottom: solid 2px #99E2D0;
   width: 50px;
   margin: 20px 0 0 20px;
@@ -940,7 +942,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 
 /* Carte détaillée du Restaurant */
 .carte {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 430px;
   display: flex;
   align-items: stretch;
@@ -970,7 +972,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   white-space: nowrap;
 }
 .carte__info--nom_plat {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 4px;
@@ -979,27 +981,29 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   text-overflow: ellipsis;
 }
 .carte__info--nom_complement {
-  font-family: "Roboto-Regular", Raleway, sans-serif;
+  font-family: "Roboto", sans-serif;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 3px 0px 0px 0px;
+  padding: 6px 0px 0px 0px;
 }
 .carte__info__prix {
   display: flex;
   align-items: flex-end;
   font-weight: bold;
   font-size: 1rem;
-  padding: 20px 20px 20px 10px;
+  padding: 23px 20px 20px 10px;
 }
 .carte__info__prix--texte {
-  padding: 0.5em;
+  /* padding: 0.5em; */
+  padding: 21px 0px 0px 0px;
 }
 .carte__validation {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 71px;
+  /* height: 71px; */
+  height: 80px;
   width: 30%;
   max-width: 0;
   overflow: hidden;
@@ -1076,8 +1080,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
 
   /* Carte détaillée du Restaurant */
   .carte {
-    font-family: "Roboto-Regular", Raleway, sans-serif;
-    width: 300px;
+    font-family: "Roboto", sans-serif;
+    width: 340px;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -1107,8 +1111,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
     white-space: nowrap; */
   }
   .carte__info--nom_plat {
-    font-family: "Roboto-Regular", Raleway, sans-serif;
-    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
     /*white-space: nowrap;
@@ -1116,7 +1120,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
     text-overflow: ellipsis;*/
   }
   .carte__info--nom_complement {
-    font-family: "Roboto-Regular", Raleway, sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
     /*white-space: nowrap;
     overflow-y: scroll;
     text-overflow: ellipsis;*/
@@ -1125,7 +1130,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
     display: flex;
     align-items: flex-end;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 20px 10px 20px 10px;
   }
   .carte__info__prix--texte {
@@ -1135,7 +1140,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 71px;
+    height: 80px;
     width: 30%;
     max-width: 0;
     overflow: hidden;
