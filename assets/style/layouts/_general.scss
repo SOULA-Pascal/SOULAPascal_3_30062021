@@ -319,3 +319,23 @@ body {
         }
     }
 }
+
+
+/* Petits Ecrans Ordinateur de 1025 à 1288 px
+/* ========================================== */
+
+@media (min-width: 1025px) and (max-width: 1288px) {
+    body {
+        background: $white-color;
+        padding-left: 0px;
+        text-decoration: none;
+    }
+    .liste_fiches {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

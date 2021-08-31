@@ -527,6 +527,24 @@ body {
     color: #000000;
   }
 }
+/* Petits Ecrans Ordinateur de 1025 à 1288 px
+/* ========================================== */
+@media (min-width: 1025px) and (max-width: 1288px) {
+  body {
+    background: #FFFFFF;
+    padding-left: 0px;
+    text-decoration: none;
+  }
+
+  .liste_fiches {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
 /* Footer */
 footer {
   background-color: #474444;
@@ -1067,74 +1085,9 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
     opacity: 1;
   }
 }
-/*
-/* Smartphones de 300 à 567 px
+/* Smartphones de 300 à 767 px
 /* =========================== */
-/*
-@media (min-width: 300px) and (max-width: 567px) {
-    /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Smartphone *
-    body {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .titre {
-        font-family: $font-title;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        margin: 0px 0 20px 0;
-        padding: 50px 0px 0px 0px;
-        &--nom_restaurant {
-            font-size: 1.5rem;
-            font-family: $font-title;
-        }
-        &--icone {
-            font-size: 1.2rem;
-            color: $darkgrey-color;
-        }
-    }
-    .carte_menus {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding: 8px 5px 8px 5px;
-    }
-    .carte {
-        font-family: $font-text;
-        width: 260px;
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-        &__info {
-            &--nom_plat {
-                font-family: $font-text;
-                font-size: 13px;
-                font-weight: bold;
-                margin-bottom: 4px;
-            }
-            &--nom_complement {
-                font-family: $font-text;
-                font-size: 11px;
-            }
-            &__prix {
-                display: flex;
-                align-items: flex-end;
-                font-weight: bold;
-                font-size: 0.8rem;
-                padding: 10px 5px 10px 5px;
-                &--texte {
-                    padding: 0.5em;
-                }
-            }
-        }
-    }
-}
-*/
-/* Smartphones de 568 à 767 px
-/* =========================== */
-@media (min-width: 568px) and (max-width: 767px) {
+@media (min-width: 300px) and (max-width: 767px) {
   /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Smartphone */
   body {
     margin-left: auto;
@@ -1324,6 +1277,71 @@ header {
     align-items: center;
   }
 }
+/*
+/* Smartphones de 300 à 400 px
+/* =========================== */
+/*
+@media (min-width: 300px) and (max-width: 400px) {
+    /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Smartphone *
+    body {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .titre {
+        font-family: $font-title;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0px 0 20px 0;
+        padding: 50px 0px 0px 0px;
+        &--nom_restaurant {
+            font-size: 1.5rem;
+            font-family: $font-title;
+        }
+        &--icone {
+            font-size: 1.2rem;
+            color: $darkgrey-color;
+        }
+    }
+    .carte_menus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 8px 5px 8px 5px;
+    }
+    .carte {
+        font-family: $font-text;
+        width: 260px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        &__info {
+            &--nom_plat {
+                font-family: $font-text;
+                font-size: 13px;
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            &--nom_complement {
+                font-family: $font-text;
+                font-size: 11px;
+            }
+            &__prix {
+                display: flex;
+                align-items: flex-end;
+                font-weight: bold;
+                font-size: 0.8rem;
+                padding: 10px 5px 10px 5px;
+                &--texte {
+                    padding: 0.5em;
+                }
+            }
+        }
+    }
+}
+*/
 /*
 Style.scss
 Appel de tous les fichiers constituant l'habillage CSS du site
