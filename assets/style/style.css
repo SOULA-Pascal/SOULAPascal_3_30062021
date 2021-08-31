@@ -449,8 +449,8 @@ body {
     align-items: center;
   }
 }
-/* Tablettes 
-/* ========= */
+/* Tablettes de 768 à 1024 px
+/* ========================== */
 @media (min-width: 768px) and (max-width: 1024px) {
   .liste_fiches {
     width: 100%;
@@ -757,8 +757,13 @@ footer a:hover {
 }
 
 .fa-heart__content {
-  /* font-size: 1.9em; */
+  /* coeur de la page principale */
   font-size: 2em;
+}
+
+.fa-heart-restaurant__content {
+  /* coeur de la page restaurant (ajustement superposition) */
+  font-size: 2.1em;
 }
 
 .fa-heart__content_empty {
@@ -769,7 +774,7 @@ footer a:hover {
 
 .fa-heart__box {
   position: relative;
-  left: 17px;
+  left: 10px;
 }
 
 .fa-heart__box:hover > .fa-heart_full {
@@ -832,6 +837,20 @@ footer a:hover {
     }
 }
 */
+/* Smartphones 
+/* ========= */
+@media (min-width: 300px) and (max-width: 767px) {
+  /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Smartphone */
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .fa-heart__box {
+    position: relative;
+    left: 5px;
+  }
+}
 /* Fichier _page_restaurant.scss
 Caractéristiques de la page du restaurant présenté par le site OhMyFood
 */
@@ -1048,13 +1067,86 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
     opacity: 1;
   }
 }
-/* Smartphones 
-/* ========= */
-@media (min-width: 300px) and (max-width: 767px) {
+/*
+/* Smartphones de 300 à 567 px
+/* =========================== */
+/*
+@media (min-width: 300px) and (max-width: 567px) {
+    /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Smartphone *
+    body {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .titre {
+        font-family: $font-title;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0px 0 20px 0;
+        padding: 50px 0px 0px 0px;
+        &--nom_restaurant {
+            font-size: 1.5rem;
+            font-family: $font-title;
+        }
+        &--icone {
+            font-size: 1.2rem;
+            color: $darkgrey-color;
+        }
+    }
+    .carte_menus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 8px 5px 8px 5px;
+    }
+    .carte {
+        font-family: $font-text;
+        width: 260px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        &__info {
+            &--nom_plat {
+                font-family: $font-text;
+                font-size: 13px;
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            &--nom_complement {
+                font-family: $font-text;
+                font-size: 11px;
+            }
+            &__prix {
+                display: flex;
+                align-items: flex-end;
+                font-weight: bold;
+                font-size: 0.8rem;
+                padding: 10px 5px 10px 5px;
+                &--texte {
+                    padding: 0.5em;
+                }
+            }
+        }
+    }
+}
+*/
+/* Smartphones de 568 à 767 px
+/* =========================== */
+@media (min-width: 568px) and (max-width: 767px) {
   /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Smartphone */
   body {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .fiche--image {
+    width: 100%;
+    height: 300px;
+    /* ex 320 */
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .menus_restaurant {
@@ -1081,7 +1173,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   /* Carte détaillée du Restaurant */
   .carte {
     font-family: "Roboto", sans-serif;
-    width: 340px;
+    width: 350px;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -1112,7 +1204,7 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   }
   .carte__info--nom_plat {
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     margin-bottom: 5px;
     /*white-space: nowrap;
@@ -1122,9 +1214,6 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
   .carte__info--nom_complement {
     font-family: "Roboto", sans-serif;
     font-size: 13px;
-    /*white-space: nowrap;
-    overflow-y: scroll;
-    text-overflow: ellipsis;*/
   }
   .carte__info__prix {
     display: flex;
@@ -1159,8 +1248,8 @@ Caractéristiques de la page du restaurant présenté par le site OhMyFood
     transform: rotateZ(360deg);
   }
 }
-/* Tablettes 
-/* ========= */
+/* Tablettes de 768 à 1024 px
+/* ========================== */
 @media (min-width: 768px) and (max-width: 1024px) {
   /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Tablettes */
   main,
@@ -1175,6 +1264,51 @@ header {
     margin-left: auto;
     margin-right: auto;
     max-width: 1024px;
+  }
+
+  .fiche--image {
+    width: 100%;
+    height: 320px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .carte_menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Petits Ecrans Ordinateur de 1025 à 1288 px
+/* ========================================== */
+@media (min-width: 1025px) and (max-width: 1288px) {
+  /*   Ecrire dans ce bloc les propriétés CSS Mobile pour petits écrans */
+  main,
+header {
+    width: Auto;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+  }
+
+  .fiche--image {
+    width: 100%;
+    height: 320px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .menus {

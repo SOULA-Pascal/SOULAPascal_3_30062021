@@ -76,8 +76,13 @@
 }
 
 .fa-heart__content {
-    /* font-size: 1.9em; */
+    /* coeur de la page principale */
     font-size: 2em;
+}
+
+.fa-heart-restaurant__content {
+    /* coeur de la page restaurant (ajustement superposition) */
+    font-size: 2.1em;
 }
 
 .fa-heart__content_empty {
@@ -88,7 +93,7 @@
 
 .fa-heart__box {
     position: relative;
-    left: 17px;
+    left: 10px;
 }
 
 .fa-heart__box:hover>.fa-heart_full {
@@ -152,3 +157,19 @@
     }
 }
 */
+
+
+/* Smartphones 
+/* ========= */
+
+@media (min-width: 300px) and (max-width: 767px) {
+    /*   Ecrire dans ce bloc les propriétés CSS Mobile pour Smartphone */
+    body {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .fa-heart__box {
+        position: relative;
+        left: 5px;
+    }
+}
